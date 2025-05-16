@@ -8,6 +8,7 @@ export const metadata = {
 }
 
 const Header = dynamic(() => import('../components/Header'))
+const Footer = dynamic(() => import('../components/Footer'))
 
 export default function RootLayout({ children }) {
   return <html lang="fr">
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <main>
         {children}
       </main>
+      <Footer />
     </body>
   </html>
 }

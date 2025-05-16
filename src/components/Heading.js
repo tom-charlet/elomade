@@ -13,10 +13,13 @@ const Heading = ({ children, className, level, tag, ...props }) => {
             style += 'text-[48px] font-semibold leading-[120%] '
             break
         case '3':
-            style += 'text-[20px] font-medium leading-[140%] '
+            style += 'text-[20px] font-medium leading-[160%] '
             break
         case '4':
-            style += 'text-[16px] font-medium leading-[140%] '
+            style += 'text-[16px] font-medium leading-[160%] '
+            break
+        case '5':
+            style += 'text-[14px] font-medium leading-[160%] '
             break
         default: false
     }

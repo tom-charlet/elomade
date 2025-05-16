@@ -15,10 +15,10 @@ body {
 
 @layer components {
   body {
-    @apply bg-beige-100 leading-[120%] text-red-900
+    @apply bg-beige-100 leading-[160%] text-red-900
   }
 
   .responsive-container {
-    @apply px-6 md:px-10 lg:px-16 xl:container xl:mx-auto
+    @apply px-6 md:px-10 lg:px-16 xl:px-28 2xl:px-60
   }
 }
