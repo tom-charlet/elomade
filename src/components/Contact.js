@@ -8,7 +8,7 @@ const Contact = () => {
         <div className='responsive-container grid grid-cols-2 gap-32 text-beige-300'>
             <div className='flex flex-col'>
                 <Heading level="2" className="mb-6">Me contacter</Heading>
-                <p className='mb-10 text-balance'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                <p className='mb-10 text-balance'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
                 <div className='flex items-center gap-6'>
                     <div className='flex items-center gap-3'>
                         <Button icon="tiktok" variante="fill-beige" />
