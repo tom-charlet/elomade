@@ -28,7 +28,7 @@ const Products = () => {
             slidesPerView={"auto"}
             spaceBetween={24}
             modules={[FreeMode]}
-            className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-60'
+            className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40'
         >
             {products?.map((item, index) => <SwiperSlide key={index} className='!w-auto'><Card {...item} /></SwiperSlide>)}
         </Swiper>
