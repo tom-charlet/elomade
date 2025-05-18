@@ -24,7 +24,7 @@ const Products = ({ slug }) => {
         if (categories?.length > 0) setAllCategories([{ id: 0, title: "Toutes les créations" }, ...categories])
     }, [categories])
 
-    return <section id="les-creations" className='py-16 lg:py-[120px] flex flex-col gap-3'>
+    return <section id="les-creations" className='py-16 lg:py-[120px] flex flex-col gap-6'>
         <div className='flex flex-col gap-6'>
             <Heading level="2" className="responsive-container">{slug ? "Les autres créations" : "Les créations"}</Heading>
             <Slider className='w-full !px-2 md:!px-6 lg:!px-[44px] xl:!px-[92px] 2xl:!px-[140px]'>
@@ -53,7 +53,7 @@ const Card = ({ title, images, categories, slug }) => {
     }
 
     return <div className='h-full flex flex-col w-[320px] lg:w-[385px] gap-4'>
-        <button onClick={handleClick} className='cursor-pointer aspect-[12/16] bg-beige-300 rounded-2xl overflow-hidden'>
+        <button onClick={handleClick} className='cursor-pointer aspect-[13/16] bg-beige-300 rounded-2xl overflow-hidden'>
             <Image width={0} height={0} sizes='100vw' alt={images?.[0]?.alt ?? title ?? ""} src={images?.[0]?.url ?? "/placeholder.svg"} className='object-cover w-full h-full' />
         </button>
         <div className='flex flex-col gap-1.5'>

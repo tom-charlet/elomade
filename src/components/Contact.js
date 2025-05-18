@@ -18,7 +18,7 @@ const Contact = () => {
                     <Button icon="email" variante="stroke-beige">elomade@elomade.fr</Button>
                 </div>
             </div>
-            <span className='aspect-[14/16] sm:aspect-[16/10] w-full bg-beige-300 rounded-2xl overflow-hidden'>
+            <span className='aspect-[16/12] sm:aspect-[16/10] w-full bg-beige-300 rounded-2xl overflow-hidden'>
                 <Image src="/hero.webp" alt="Contact" width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
             </span>
         </div>

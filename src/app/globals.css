@@ -29,4 +29,13 @@ body {
   .gradient-hero:after {
     background: linear-gradient(180deg, rgba(240, 219, 190, 0) 90%, rgba(240, 219, 190, 100) 100%)
   }
+
+  .bullet {
+    @apply bg-beige-100 size-3 rounded-full duration-300 ease-out relative after:content-[""] after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-full after:h-full after:rounded-full after:scale-0 after:bg-red-800 after:z-40 after:duration-300 after:ease-out
+  }
+
+  .bullet-active {
+    @apply after:scale-120
+  }
+
 }
