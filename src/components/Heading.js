@@ -7,7 +7,7 @@ const Heading = ({ children, className, level, tag, ...props }) => {
 
     switch (level) {
         case '1':
-            style += 'text-[28px] lg:text-[52px] font-semibold leading-[120%]'
+            style += 'text-[32px] lg:text-[52px] font-semibold leading-[120%]'
             break
         case '2':
             style += 'text-[28px] lg:text-[48px] font-semibold leading-[120%] '

@@ -9,6 +9,10 @@
   --color-beige-300: #F0DBBE;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter';
 }
