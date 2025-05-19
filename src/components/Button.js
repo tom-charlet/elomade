@@ -6,8 +6,8 @@ const Icon = dynamic(() => import('./Icon'))
 const Button = ({ children, href, tag, className, icon, variante, reverse, size, ...props }) => {
     const Balise = tag ?? "button";
 
-    let styleButton = `flex justify-center items-center text-center rounded-full cursor-pointer ${(icon && !children) ? "size-14" : "px-6 py-4 gap-2"} ${className ?? ""}`;
-    let styleIcon = `size-5`
+    let styleButton = `flex justify-center items-center text-center rounded-full cursor-pointer font-medium ${(icon && !children) ? "size-14" : "pl-6 pr-5 py-4 gap-2"} ${className ?? ""}`;
+    let styleIcon = ` ${size == "sm" ? "size-4" : "size-5"}`
 
     switch (variante) {
         case "fill-beige": {
@@ -17,7 +17,11 @@ const Button = ({ children, href, tag, className, icon, variante, reverse, size,
         case "stroke-beige": {
             styleButton += " border border-beige-300"
             styleIcon += " fill-beige-300"
-        }
+        } break
+        case "stroke-red": {
+            styleButton += " border border-red-800"
+            styleIcon += " fill-red-800"
+        } break
         default: {
             styleButton += " bg-red-800 text-beige-300"
             styleIcon += " fill-beige-300"

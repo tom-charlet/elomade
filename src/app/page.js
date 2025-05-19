@@ -7,7 +7,7 @@ const Contact = dynamic(() => import('../components/Contact'))
 export default function Home() {
   return <>
     <Hero />
-    <Products />
+    <Products title="Les nouveautés" />
     <Contact />
   </>
 }

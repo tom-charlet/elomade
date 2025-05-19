@@ -12,7 +12,7 @@ const Header = () => {
             </Link>
             <ul className='items-center gap-10 hidden lg:flex'>
                 <li>
-                    <Link href="#les-creations" className='font-medium'>Les créations</Link>
+                    <Link href="/creations" className='font-medium'>Les créations</Link>
                 </li>
                 <li>
                     <Button href="#me-contacter">Me contacter</Button>

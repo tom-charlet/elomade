@@ -14,7 +14,7 @@ export default async function ProductPage({ params }) {
 
     return <>
         <Product {...data} />
-        <Products slug={slug} />
+        <Products slug={slug} title="Les autres créations" />
         <Contact />
     </>
 }
