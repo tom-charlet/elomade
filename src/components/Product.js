@@ -12,6 +12,8 @@ const Product = ({ title, categories, images, price, minPrice, maxPrice, text })
                 className="aspect-[16/12] xl:aspect-[16/10] lg:wh-full !rounded-3xl"
                 spaceBetween={16}
                 pagination
+                freeMode={true}
+                mousewheel={true}
             >
                 {images.map((item, index) => <Image key={index} src={item.url ?? "/placeholder.svg"} alt={item.alt ?? title} width={0} height={0} sizes='100vw' className='rounded-3xl w-auto h-full object-cover' />)}
             </Slider>}

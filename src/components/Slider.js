@@ -15,10 +15,9 @@ const Slider = ({ children, pagination, ...props }) => {
 
     return <div className='relative w-full'>
         <Swiper
+            {...props}
             slidesPerView={"auto"}
             modules={[FreeMode, Pagination]}
-            freeMode={true}
-            {...props}
             grabCursor={true}
             pagination={pagination && ready ? {
                 el: paginationRef.current,

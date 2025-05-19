@@ -25,7 +25,7 @@ const Products = ({ title, grid, slug }) => {
         if (categories?.length > 0) setAllCategories([{ id: 0, title: "Toutes les créations" }, ...categories])
     }, [categories])
 
-    return <section id="les-creations" className={`pb-20 pt-16 lg:py-[120px] flex flex-col ${grid ? "gap-6 lg:pt-16 mt-[112px]" : "gap-10 lg:gap-16"} relative`}>
+    return <section id="les-creations" className={`pb-20 pt-16 lg:py-[120px] flex flex-col ${grid ? "gap-5 lg:pt-16 mt-[112px]" : "gap-10 lg:gap-16"} relative`}>
         <div className={'flex flex-col gap-6'}>
             {title && <div className='flex items-center justify-between responsive-container'>
                 <Heading level="2">{title}</Heading>
@@ -37,9 +37,7 @@ const Products = ({ title, grid, slug }) => {
                 {allCategories?.map((item, index) => <NavItem key={index} active={filter == item.id} onClick={() => setFilter(item.id)}>{item.title}</NavItem>)}
             </Slider>
         </div>}
-        {grid ? <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 responsive-container gap-x-4 lg:gap-x-6 gap-y-10 lg:gap-y-12'>
-            {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} grid />)}
-            {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} grid />)}
+        {grid ? <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 responsive-container gap-x-4  gap-y-8 lg:gap-x-6 lg:gap-y-12'>
             {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} grid />)}
         </div> : <Slider className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 20 } }}>
             {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} />)}
@@ -53,7 +51,7 @@ const Products = ({ title, grid, slug }) => {
 export default Products
 
 const NavItem = ({ children, active, grid, ...props }) => {
-    return <button {...props} className={`font-medium text-[16px] md:text-[18px] p-4 lg:p-5 cursor-pointer ${active ? "" : "opacity-50"}`}>
+    return <button {...props} className={`font-medium text-[16px] md:text-[18px] px-4 py-5 lg:p-5 cursor-pointer ${active ? "" : "opacity-50"}`}>
         {children}
     </button>
 }
@@ -66,7 +64,7 @@ const Card = ({ title, images, categories, slug, grid }) => {
     }
 
     return <div className={`h-full flex flex-col gap-4 ${grid ? "w-full" : "w-[320px] lg:w-[385px]"}`}>
-        <button onClick={handleClick} className='cursor-pointer aspect-[13/16] bg-beige-300 rounded-2xl overflow-hidden'>
+        <button onClick={handleClick} className='cursor-pointer aspect-[14/16] lg:aspect-[13/16] bg-beige-300 rounded-2xl overflow-hidden'>
             <Image width={0} height={0} sizes='100vw' alt={images?.[0]?.alt ?? title ?? ""} src={images?.[0]?.url ?? "/placeholder.svg"} className='object-cover w-full h-full' />
         </button>
         <div className='flex flex-col gap-1.5'>
