@@ -19,7 +19,7 @@ const Product = ({ title, categories, images, price, minPrice, maxPrice, text })
             </Slider>}
             {images?.length == 1 && <Image src={images[0].url ?? "/placeholder.svg"} alt={images[0].alt ?? title} width={0} height={0} sizes='100vw' className='rounded-3xl w-full aspect-[16/12] object-cover' />}
         </div>
-        <div className='flex md:items-start flex-col gap-6 lg:gap-8 w-auto lg:overflow-auto max-h-full'>
+        <div className='flex md:items-start flex-col gap-6 lg:gap-8 w-auto'>
             <div className='flex flex-col'>
                 {categories?.length > 0 && <Heading level="6" className="opacity-70">{categories?.map((item, index) => {
                     return item ? `${index > 0 ? ` - ${item.title}` : item.title}` : null

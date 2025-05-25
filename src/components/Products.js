@@ -9,6 +9,7 @@ const Heading = dynamic(() => import('./Heading'))
 const Slider = dynamic(() => import('./Slider'))
 const Button = dynamic(() => import('./Button'))
 const Card = dynamic(() => import('./Card'))
+const Animation = dynamic(() => import('./Animation'))
 
 const Products = ({ title, grid, slug }) => {
     const [filter, setFilter] = useState(0)
@@ -25,27 +26,31 @@ const Products = ({ title, grid, slug }) => {
         if (categories?.length > 0) setAllCategories([{ id: 0, title: "Toutes les créations" }, ...categories])
     }, [categories])
 
-    return <section id="les-creations" className={`pb-20 pt-16 lg:py-[120px] flex flex-col ${grid ? "gap-5 lg:pt-16 mt-[112px]" : "gap-10 lg:gap-16"} relative`}>
+    return <Animation tag="section" type={["fade"]} direction="up" stagger={0.1} transition={{ duration: 1.5 }} once id="les-creations" className={`pb-20 pt-16 lg:py-[120px] flex flex-col ${grid ? "gap-5 lg:pt-16 mt-[112px]" : "gap-10 lg:gap-16"} relative`}>
         <div className={'flex flex-col gap-6'}>
             {title && <div className='flex items-center justify-between responsive-container'>
                 <Heading level="2">{title}</Heading>
                 {!grid && <Button variante="stroke-red" icon="chevron-right" reverse className="hidden md:flex" href="/creations">En voir plus</Button>}
             </div>}
         </div>
-        {grid && <div className='sticky top-0 left-0 bg-beige-100 z-40'>
-            <Slider className='w-full !px-2 md:!px-6 lg:!px-[44px] xl:!px-[92px] 2xl:!px-[140px]'>
-                {allCategories?.map((item, index) => <NavItem key={index} active={filter == item.id} onClick={() => setFilter(item.id)}>{item.title}</NavItem>)}
+        {grid ? <>
+            <div className='sticky top-0 left-0 bg-beige-100 z-40 mb-6'>
+                <Slider animate className='w-full !px-2 md:!px-6 lg:!px-[44px] xl:!px-[92px] 2xl:!px-[140px]'>
+                    {allCategories?.map((item, index) => <NavItem key={index} active={filter == item.id} onClick={() => setFilter(item.id)}>{item.title}</NavItem>)}
+                </Slider>
+            </div>
+            <Animation type={["fade", "move"]} direction="up" stagger={0.1} className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 responsive-container gap-x-4  gap-y-8 lg:gap-x-6 lg:gap-y-12'>
+                {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} grid />)}
+            </Animation>
+        </> : <>
+            <Slider animate className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 20 } }}>
+                {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} />)}
             </Slider>
-        </div>}
-        {grid ? <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 responsive-container gap-x-4  gap-y-8 lg:gap-x-6 lg:gap-y-12'>
-            {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} grid />)}
-        </div> : <Slider className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 20 } }}>
-            {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} />)}
-        </Slider>}
-        {!grid && <div className='responsive-container md:hidden'>
-            <Button variante="stroke-red" icon="chevron-right" reverse href="/creations">En voir plus</Button>
-        </div>}
-    </section>
+            <div className='responsive-container md:hidden mt-10'>
+                <Button variante="stroke-red" icon="chevron-right" reverse href="/creations">En voir plus</Button>
+            </div>
+        </>}
+    </Animation>
 }
 
 export default Products

@@ -3,10 +3,14 @@
 @theme {
   --font-inter: var(--inter);
 
+  --color-red-700: #8A0F2E;
   --color-red-800: #661126;
   --color-red-900: #350E14;
   --color-beige-100: #F7EDDE;
   --color-beige-300: #F0DBBE;
+
+  --ease-smooth-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth-in-out: cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 html {

@@ -6,24 +6,24 @@ const Icon = dynamic(() => import('./Icon'))
 const Button = ({ children, href, tag, className, icon, variante, reverse, size, ...props }) => {
     const Balise = tag ?? "button";
 
-    let styleButton = `flex justify-center items-center text-center rounded-full cursor-pointer font-medium ${(icon && !children) ? "size-14" : "pl-6 pr-5 py-4 gap-2"} ${className ?? ""}`;
-    let styleIcon = ` ${size == "sm" ? "size-4" : "size-5"}`
+    let styleButton = `flex justify-center items-center gap-2 text-center rounded-full cursor-pointer font-medium duration-800 ease-smooth-out group ${icon ? (children ? (reverse ? "pl-6 pr-5 py-4" : "pr-6 pl-5 py-4") : "size-14") : "px-6 py-4"} ${className ?? ""}`;
+    let styleIcon = `duration-800 ease-smooth-out ${size == "sm" ? "size-4" : "size-5"}`
 
     switch (variante) {
-        case "fill-beige": {
-            styleButton += " bg-beige-300"
-            styleIcon += " fill-red-800"
-        } break
         case "stroke-beige": {
-            styleButton += " border border-beige-300"
-            styleIcon += " fill-beige-300"
+            styleButton += " border border-beige-300 hover:text-red-700 hover:bg-beige-100 hover:border-beige-100 hover:scale-105"
+            styleIcon += " fill-beige-300 group-hover:fill-red-700"
         } break
         case "stroke-red": {
-            styleButton += " border border-red-800"
-            styleIcon += " fill-red-800"
+            styleButton += " border border-red-800 hover:border-red-700 hover:text-red-700 hover:scale-105"
+            styleIcon += " fill-red-800 group-hover:fill-red-700"
         } break
-        default: {
-            styleButton += " bg-red-800 text-beige-300"
+        case "fill-beige": {
+            styleButton += " bg-beige-300 hover:bg-beige-100 hover:scale-105"
+            styleIcon += " fill-red-800 group-hover:fill-red-700"
+        } break
+        case "fill-red": default: {
+            styleButton += " bg-red-800 text-beige-300 hover:bg-red-700 hover:scale-105"
             styleIcon += " fill-beige-300"
         }
     }
