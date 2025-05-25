@@ -55,8 +55,8 @@ export function Products() {
             title: "Le Big Pouf 3",
             slug: "le-big-pouf-3",
             categories: [1, 3],
-            price: null,
-            minPrice: 40,
+            price: 40,
+            minPrice: null,
             maxPrice: null,
             text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
             images: [

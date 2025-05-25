@@ -9,7 +9,7 @@ const Animation = dynamic(() => import('./Animation'))
 
 const Card = ({ title, images, categories, slug, grid }) => {
 
-    return <Animation type={["fade", "scale"]} direction="up" value={{ scale: [0.9, 1] }} transition={{ duration: 1 }} once>
+    return <Animation type={["fade"]} direction="up" value={{ scale: [0.9, 1] }} transition={{ duration: 1 }} once amount={0.2}>
         <Link href={slug ? `/creations/${slug}` : ""} className={`h-full flex flex-col gap-4 ${grid ? "w-full" : "w-[320px] lg:w-[385px]"}`}>
             <span className='aspect-[14/16] lg:aspect-[13/16] bg-beige-300 rounded-2xl overflow-hidden'>
                 <Image width={0} height={0} sizes='100vw' alt={images?.[0]?.alt ?? title ?? ""} src={images?.[0]?.url ?? "/placeholder.svg"} className='object-cover w-full h-full' />

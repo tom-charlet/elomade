@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { FreeMode, Pagination, Mousewheel } from 'swiper/modules';
 import 'swiper/css/bundle';
 import { motion } from "framer-motion"
 
@@ -23,8 +23,11 @@ const Slider = ({ children, pagination, animate, ...props }) => {
         <Swiper
             {...props}
             slidesPerView={"auto"}
-            modules={[FreeMode, Pagination]}
-            grabCursor={true}
+            modules={[FreeMode, Pagination, Mousewheel]}
+            mousewheel={{
+                forceToAxis: true,
+                sensitivity: 1,
+            }}
             pagination={pagination && ready ? {
                 el: paginationRef.current,
                 bulletClass: "bullet",
@@ -35,9 +38,8 @@ const Slider = ({ children, pagination, animate, ...props }) => {
             } : false}
         >
             {children?.map((item, index) => <SwiperSlide key={index} className='!w-auto'>
-                <motion.div variants={animate ? itemVariant : null} className='!h-full'>{item}</motion.div>
+                <motion.div variants={animate ? itemVariant : null} viewport={{ once: true }} className='!h-full'>{item}</motion.div>
             </SwiperSlide>)}
-
         </Swiper>
         {pagination && <div className='absolute bottom-6 left-1/2 -translate-x-1/2 w-full flex z-40'>
             <div ref={paginationRef} className='custom-pagination w-full justify-center items-center z-20 flex gap-2'></div>
