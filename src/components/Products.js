@@ -9,7 +9,6 @@ const Heading = dynamic(() => import('./Heading'))
 const Slider = dynamic(() => import('./Slider'))
 const Button = dynamic(() => import('./Button'))
 const Card = dynamic(() => import('./Card'))
-const Animation = dynamic(() => import('./Animation'))
 
 const Products = ({ title, grid, slug }) => {
     const [filter, setFilter] = useState(0)
@@ -33,7 +32,7 @@ const Products = ({ title, grid, slug }) => {
         if (categories?.length > 0) setAllCategories([{ id: 0, title: "Toutes les créations" }, ...categories])
     }, [categories])
 
-    return <Animation tag="section" type={grid ? null : ["fade"]} direction="up" stagger={0.1} transition={{ duration: 1.5 }} once id="les-creations" className={`pb-20 pt-16 lg:py-[120px] flex flex-col ${grid ? "gap-5 lg:pt-16 mt-16 lg:mt-[112px]" : "gap-10 lg:gap-16"} relative`}>
+    return <section id="les-creations" className={`pb-20 pt-16 lg:py-[120px] flex flex-col ${grid ? "gap-5 lg:pt-16 mt-16 lg:mt-[112px]" : "gap-10 lg:gap-16"} relative`}>
         <div ref={ref} className={'flex flex-col gap-6'}>
             {title && <div className='flex items-center justify-between responsive-container'>
                 <Heading level="2">{title}</Heading>
@@ -46,18 +45,18 @@ const Products = ({ title, grid, slug }) => {
                     {allCategories?.map((item, index) => <NavItem key={index} index={index} filter={filter} onClick={() => handleFilter(item.id)}>{item.title}</NavItem>)}
                 </Slider>
             </div>
-            <Animation type={["fade", "move"]} direction="up" stagger={0.1} once className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 responsive-container gap-x-4  gap-y-8 lg:gap-x-6 lg:gap-y-12'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 responsive-container gap-x-4  gap-y-8 lg:gap-x-6 lg:gap-y-12'>
                 {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} grid />)}
-            </Animation>
+            </div>
         </> : <>
-            <Slider animate className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 20 } }}>
+            <Slider className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 20 } }}>
                 {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} />)}
             </Slider>
             <div className='responsive-container md:hidden mt-10'>
                 <Button variante="stroke-red" icon="chevron-right" reverse href="/creations">En voir plus</Button>
             </div>
         </>}
-    </Animation>
+    </section>
 }
 
 export default Products

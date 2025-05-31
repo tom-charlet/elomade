@@ -1,8 +1,8 @@
-import { Inter } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 
-export const inter = Inter({
-    weight: ["400", "500", "600"],
+export const raleway = Raleway({
+    weight: ["400", "500", "600", "700"],
     style: ['normal', 'italic'],
-    variable: '--inter',
+    variable: '--raleway',
     subsets: ['latin']
 })
