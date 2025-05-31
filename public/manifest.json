@@ -1,0 +1,37 @@
+{
+    "short_name": "Elomade",
+    "name": "Elomade",
+    "icons": [
+        {
+            "src": "/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "purpose": "any"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "shortcuts": [
+        {
+            "name": "Frontend",
+            "short_name": "Frontend",
+            "description": "Frontend website",
+            "url": "/"
+        }
+    ],
+    "description": "Frontend website"
+}

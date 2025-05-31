@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-inter: var(--inter);
+  --font-raleway: var(--raleway);
 
   --color-red-700: #8A0F2E;
   --color-red-800: #661126;
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: 'Inter';
+  font-family: 'Raleway';
 }
 
 @layer components {
