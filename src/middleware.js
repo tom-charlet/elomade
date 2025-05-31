@@ -5,7 +5,7 @@ export function middleware(request) {
     const cspHeader = `
     default-src 'self' *.typekit.net www.youtube.com fonts.googleapis.com;
     script-src 'self' 'nonce-${nonce}' *.gstatic.com;
-    style-src 'self' 'nonce-${nonce}' *.typekit.net fonts.googleapis.com;
+    style-src 'self' 'nonce-${nonce}' 'unsafe-hashes' *.typekit.net fonts.googleapis.com;
     img-src 'self' blob: data: purecatamphetamine.github.io;
     connect-src 'self' fonts.googleapis.com googletagmanager.com;
     font-src 'self' *.typekit.net;
