@@ -10,7 +10,7 @@ const Hero = () => {
     return <section className='overflow-hidden'>
         <div className='relative lg:pt-28 lg:min-h-svh flex flex-col overflow-hidden bg-beige-300'>
             <div className='flex flex-col lg:items-start responsive-container pt-6 pb-16 lg:pb-12 lg:py-[10svh] xl:py-[15svh] z-20'>
-                <Heading level="1" className="mb-4 lg:mb-6">Toutes vos envies <br className='hidden lg:block' />sur commande !</Heading>
+                <Heading level="1" className="mb-4 lg:mb-6 lg:text-[52px]">Toutes vos envies <br className='hidden lg:block' />sur commande !</Heading>
                 <Heading level="3" tag="h2" className='mb-8 font-normal '>Créations en crochet sur mesure,<br className='hidden lg:block' /> réalisées avec amour et passion.</Heading>
                 <Button icon="chevron-right" reverse className="md:self-start" href="#les-creations">Découvrir l&apos;univers</Button>
             </div>

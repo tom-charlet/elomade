@@ -21,9 +21,13 @@ body {
   font-family: 'Raleway';
 }
 
+.clip-radius {
+  clip-path: inset(0 round 1rem);
+}
+
 @layer components {
   body {
-    @apply bg-beige-100 leading-[160%] text-red-900
+    @apply bg-beige-100 leading-[150%] text-red-900
   }
 
   .responsive-container {
