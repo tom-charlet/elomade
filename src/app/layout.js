@@ -9,7 +9,7 @@ export default async function RootLayout({ children }) {
   const nonce = (await headers()).get('x-nonce')
 
   return <html lang="fr">
-    <body className={`${raleway.variable}`}>
+    <body className={`${raleway.variable}`} nonce={nonce}>
       <GlobalContextProvider data={data}>
         {children}
       </GlobalContextProvider>
@@ -27,8 +27,6 @@ export const metadata = {
     apple: [
       { url: '/icon-192x192.png' },
       { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-256x256.png', sizes: '256x256', type: 'image/png' },
-      { url: '/icon-384x384.png', sizes: '384x384', type: 'image/png' },
       { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
     ]
   }
