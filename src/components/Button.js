@@ -11,8 +11,8 @@ const Button = ({ children, href, tag, className, icon, variante, reverse, size,
 
     switch (variante) {
         case "stroke-beige": {
-            styleButton += " border border-beige-300 hover:text-red-700 hover:bg-beige-100 hover:border-beige-100 hover:scale-105"
-            styleIcon += " fill-beige-300 group-hover:fill-red-700"
+            styleButton += " border border-beige-300 hover:border-beige-100 hover:text-beige-100 hover:scale-105"
+            styleIcon += " fill-beige-300 group-hover:fill-beige-100"
         } break
         case "stroke-red": {
             styleButton += " border border-red-800 hover:border-red-700 hover:text-red-700 hover:scale-105"

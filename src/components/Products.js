@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { useState, useEffect } from 'react'
 import { useGlobal } from '../context/Global'
 import { useIsMobile } from '../utils/useIsMobile'
+import { motion } from 'framer-motion'
 
 const Heading = dynamic(() => import('./Heading'))
 const Slider = dynamic(() => import('./Slider'))
@@ -13,7 +14,7 @@ const Card = dynamic(() => import('./Card'))
 const Products = ({ title, grid, slug }) => {
     const [filter, setFilter] = useState(0)
     const [allCategories, setAllCategories] = useState([])
-    const { products, categories } = useGlobal()
+    const { products, categories, animation } = useGlobal()
 
     const Filter = (item) => {
         if (slug && item.slug == slug) return null
@@ -34,11 +35,11 @@ const Products = ({ title, grid, slug }) => {
         </div>
         {grid ? <>
             <Categories items={allCategories} onChange={e => setFilter(e)} active={filter} />
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 responsive-container gap-x-4  gap-y-8 lg:gap-x-6 lg:gap-y-12'>
+            <motion.div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 responsive-container gap-x-4  gap-y-8 lg:gap-x-6 lg:gap-y-12'>
                 {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} grid />)}
-            </div>
+            </motion.div>
         </> : <>
-            <Slider className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 24 } }}>
+            <Slider animate className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 24 } }}>
                 {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} />)}
             </Slider>
             <div className='responsive-container md:hidden mt-10'>

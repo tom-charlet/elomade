@@ -4,16 +4,19 @@ import { useRef, useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination, Mousewheel } from 'swiper/modules';
 import 'swiper/css/bundle';
+import { motion } from 'framer-motion'
+import { useGlobal } from '@/context/Global'
 
 const Slider = ({ children, pagination, animate, ...props }) => {
     const paginationRef = useRef(null);
     const [ready, setReady] = useState(false);
+    const { animation } = useGlobal()
 
     useEffect(() => {
         setReady(true);
     }, []);
 
-    return <div className='relative w-full'>
+    return <motion.div variants={animation("stagger")} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.4 }} className='relative w-full'>
         <Swiper
             {...props}
             slidesPerView={"auto"}
@@ -32,13 +35,13 @@ const Slider = ({ children, pagination, animate, ...props }) => {
             } : false}
         >
             {children?.map((item, index) => <SwiperSlide key={index} className='!w-auto'>
-                <div className='!h-full'>{item}</div>
+                <motion.div variants={animate ? animation("slide") : null} className='!h-full'>{item}</motion.div>
             </SwiperSlide>)}
         </Swiper>
         {pagination && <div className='absolute bottom-6 left-1/2 -translate-x-1/2 w-full flex z-40'>
             <div ref={paginationRef} className='custom-pagination w-full justify-center items-center z-20 flex gap-2'></div>
         </div>}
-    </div>
+    </motion.div>
 }
 
 export default Slider

@@ -1,14 +1,20 @@
-import dynamic from 'next/dynamic'
+'use client'
 
-const Heading = dynamic(() => import('../components/Heading'))
-const Button = dynamic(() => import('../components/Button'))
+import dynamic from 'next/dynamic'
+import { useGlobal } from '@/context/Global'
+import { motion } from 'framer-motion'
+
+const MotionHeading = dynamic(() => import('../components/MotionHeading'))
+const MotionButton = dynamic(() => import('../components/MotionButton'))
 
 const notFound = () => {
-    return <section className='min-h-[calc(100svh-100px)] flex flex-col items-center justify-center pt-[180px] pb-[120px]'>
-        <Heading level="1" className="mb-2">Erreur 404</Heading>
-        <Heading level="3" className="mb-8">Oups.. Il n&apos;y a rien à voir ici</Heading>
-        <Button href="/">Retourner à l&apos;accueil</Button>
-    </section>
+    const { animation } = useGlobal()
+
+    return <motion.section variants={animation("stagger")} initial="hidden" whileInView="visible" viewport={{ once: true }} className='min-h-[calc(100svh-100px)] flex flex-col items-center justify-center pt-[180px] pb-[120px]'>
+        <MotionHeading variants={animation("fadeUp")} level="1" className="mb-2">Erreur 404</MotionHeading>
+        <MotionHeading variants={animation("fadeUp")} level="3" className="mb-8">Oups.. Il n&apos;y a rien à voir ici</MotionHeading>
+        <MotionButton variants={animation("fadeUp")} href="/">Retourner à l&apos;accueil</MotionButton>
+    </motion.section>
 }
 
 export default notFound

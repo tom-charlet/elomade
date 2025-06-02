@@ -7,7 +7,7 @@ const Footer = dynamic(() => import('../components/Footer'))
 const template = ({ children }) => {
     return <>
         <Header />
-        <main>
+        <main className='max-w-full overflow-hidden'>
             {children}
         </main>
         <Footer />
