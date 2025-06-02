@@ -38,7 +38,7 @@ const Products = ({ title, grid, slug }) => {
                 {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} grid />)}
             </div>
         </> : <>
-            <Slider className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 20 } }}>
+            <Slider className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 24 } }}>
                 {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} />)}
             </Slider>
             <div className='responsive-container md:hidden mt-10'>

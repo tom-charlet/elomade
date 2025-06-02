@@ -6,10 +6,10 @@ const Footer = () => {
             <p>© 2025 - Tous droits reservées</p>
             <ul className="flex flex-col md:flex-row items-center gap-2 md:gap-6">
                 <li>
-                    <Link href="/mentions-legales" className="font-medium hover:text-red-700 duration-400 ease-smooth-out">Mentions légales</Link>
+                    <Link href="/mentions-legales" className="font-semibold hover:text-red-700 duration-400 ease-smooth-out">Mentions légales</Link>
                 </li>
                 <li>
-                    <Link href="/politique-de-confidentialite" className="font-medium hover:text-red-700 duration-400 ease-smooth-out">Politique de confidentialité</Link>
+                    <Link href="/politique-de-confidentialite" className="font-semibold hover:text-red-700 duration-400 ease-smooth-out">Politique de confidentialité</Link>
                 </li>
             </ul>
         </div>

@@ -12,8 +12,8 @@ const Contact = () => {
                 <p className='mb-10 md:text-balance'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</p>
                 <div className='flex flex-col xl:flex-row gap-4 w-full md:w-auto'>
                     <div className='flex items-center gap-4 w-full md:w-auto'>
-                        <Button href="https://www.tiktok.com/@elomade.it" target="_blank" icon="tiktok" variante="fill-beige" className="basis-full md:basis-auto">elomade.it</Button>
-                        <Button href="https://www.instagram.com/elomadeit" target="_blank" icon="instagram" variante="fill-beige" className="basis-full md:basis-auto">elomadeit</Button>
+                        <Button href="https://www.tiktok.com/@elomadecrochet" target="_blank" icon="tiktok" variante="fill-beige" className="basis-full md:basis-auto">elomadecrochet</Button>
+                        <Button href="https://www.instagram.com/elomadecrochet" target="_blank" icon="instagram" variante="fill-beige" className="basis-full md:basis-auto">elomadecrochet</Button>
                     </div>
                     <Button icon="email" variante="stroke-beige" target="_blank" href="mailto:contact@elomade.fr">contact@elomade.fr</Button>
                 </div>
