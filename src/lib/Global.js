@@ -5,8 +5,9 @@ export async function Data() {
     const categories = Categories()
 
     return {
-        products: products?.map(product => {
+        products: products?.map((product, id) => {
             return {
+                id: id + 1,
                 ...product,
                 categories: product.categories?.map(id => {
                     return categories?.find(e => e.id == id) ?? null

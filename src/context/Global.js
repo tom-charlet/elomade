@@ -7,6 +7,7 @@ const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children, data }) => {
     const isMobile = useIsMobile()
+
     const variants = {
         "stagger": {
             hidden: {},
@@ -19,11 +20,13 @@ export const GlobalContextProvider = ({ children, data }) => {
         "fadeUp": {
             hidden: {
                 opacity: 0,
-                y: 100
+                y: 100,
+                x: 0,
             },
             visible: {
                 opacity: 1,
                 y: 0,
+                x: 0,
                 transition: {
                     duration: 1.2,
                     ease: [0.16, 1, 0.3, 1]
@@ -40,20 +43,6 @@ export const GlobalContextProvider = ({ children, data }) => {
                 y: 0,
                 transition: {
                     duration: 1.2,
-                    ease: [0.16, 1, 0.3, 1]
-                }
-            }
-        },
-        "fade": {
-            hidden: {
-                opacity: 0,
-                scale: 1.02
-            },
-            visible: {
-                opacity: 1,
-                scale: 1,
-                transition: {
-                    duration: 1.5,
                     ease: [0.16, 1, 0.3, 1]
                 }
             }
@@ -75,11 +64,13 @@ export const GlobalContextProvider = ({ children, data }) => {
         "fadeLeft": {
             hidden: {
                 opacity: 0,
-                x: 100
+                x: 100,
+                y: 0,
             },
             visible: {
                 opacity: 1,
                 x: 0,
+                y: 0,
                 transition: {
                     duration: 1.2,
                     ease: [0.16, 1, 0.3, 1]
@@ -89,11 +80,13 @@ export const GlobalContextProvider = ({ children, data }) => {
         "fadeRight": {
             hidden: {
                 opacity: 0,
-                x: -100
+                x: -100,
+                y: 0,
             },
             visible: {
                 opacity: 1,
                 x: 0,
+                y: 0,
                 transition: {
                     duration: 1.2,
                     ease: [0.16, 1, 0.3, 1]
@@ -116,13 +109,11 @@ export const GlobalContextProvider = ({ children, data }) => {
         }
     }
 
-    const animation = (name) => {
-        return variants[name]
-    }
+    const animation = (name) => variants[name]
 
     return <GlobalContext.Provider value={{
         ...data,
-        animation: animation,
+        animation,
         isMobile
     }}>
         {children}

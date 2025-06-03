@@ -13,7 +13,7 @@ const Header = () => {
     const { animation } = useGlobal()
 
     return <header className='absolute top-0 left-0 w-full z-40'>
-        <motion.nav variants={animation("stagger")} initial="hidden" whileInView="visible" viewport={{ once: true }} className='responsive-container pt-8 lg:pt-0 lg:h-28 flex items-center justify-center lg:justify-between'>
+        <motion.nav variants={animation("stagger")} initial="hidden" animate="visible" className='responsive-container pt-8 lg:pt-0 lg:h-28 flex items-center justify-center lg:justify-between'>
             <MotionLink variants={animation("fadeDown")} href="/">
                 <Image src="/logo.svg" sizes='100vw' alt="Elomade" width={0} height={0} className='h-10 w-auto' />
             </MotionLink>

@@ -8,11 +8,14 @@ const MotionHeading = dynamic(() => import('../components/MotionHeading'))
 const Button = dynamic(() => import('../components/Button'))
 
 const Contact = () => {
-    const { animation } = useGlobal()
+    const { animation, isMobile } = useGlobal()
+
+    const fadeUp = animation("fadeUp")
+    const fadeLeft = animation("fadeLeft")
 
     return <section id="me-contacter" className='bg-red-800 py-16 lg:py-[120px] overflow-hidden'>
         <div className='responsive-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-32 text-beige-300'>
-            <motion.div variants={animation("stagger")} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className='flex flex-col items-start'>
+            <motion.div variants={animation("stagger")} initial="hidden" whileInView="visible" viewport={{ once: true }} className='flex flex-col items-start'>
                 <MotionHeading variants={animation("fadeUp")} level="1" className="mb-6">Me contacter</MotionHeading>
                 <motion.p variants={animation("fadeUp")} className='mb-10 md:text-balance'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</motion.p>
                 <motion.div variants={animation("fadeUp")} className='flex flex-col md:flex-row gap-3 w-full md:w-auto'>
@@ -23,13 +26,13 @@ const Contact = () => {
                     <Button icon="email" variante="stroke-beige" target="_blank" href="mailto:contact@elomade.fr" className="md:ml-1.5">contact@elomade.fr</Button>
                 </motion.div>
             </motion.div>
-            <motion.div variants={animation("fadeLeft")} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className='aspect-[16/12] sm:aspect-[16/10] w-full bg-beige-300 rounded-2xl overflow-hidden'>
+            <motion.div variants={isMobile ? fadeUp : fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className='aspect-[16/12] sm:aspect-[16/10] w-full bg-beige-300 rounded-2xl overflow-hidden'>
                 <span className="w-full h-full scale-[1.12]">
                     <Image src="/hero.webp" alt="Contact" width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
                 </span>
             </motion.div>
         </div>
-    </section >
+    </section>
 }
 
 export default Contact

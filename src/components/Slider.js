@@ -7,7 +7,7 @@ import 'swiper/css/bundle';
 import { motion } from 'framer-motion'
 import { useGlobal } from '@/context/Global'
 
-const Slider = ({ children, pagination, animate, ...props }) => {
+const Slider = ({ children, pagination, animate, left, ...props }) => {
     const paginationRef = useRef(null);
     const [ready, setReady] = useState(false);
     const { animation } = useGlobal()
@@ -35,7 +35,7 @@ const Slider = ({ children, pagination, animate, ...props }) => {
             } : false}
         >
             {children?.map((item, index) => <SwiperSlide key={index} className='!w-auto'>
-                <motion.div variants={animate ? animation("slide") : null} className='!h-full'>{item}</motion.div>
+                <motion.div variants={animate ? (left ? animation("fadeLeft") : animation("slide")) : null} className='!h-full'>{item}</motion.div>
             </SwiperSlide>)}
         </Swiper>
         {pagination && <div className='absolute bottom-6 left-1/2 -translate-x-1/2 w-full flex z-40'>
