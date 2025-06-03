@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import Seo from '@/lib/Seo'
 
 const Hero = dynamic(() => import('../components/Hero'))
 const Products = dynamic(() => import('../components/Products'))
@@ -10,4 +11,8 @@ export default function Home() {
     <Products title="Les nouveautés" />
     <Contact />
   </>
+}
+
+export async function generateMetadata() {
+  return Seo()
 }

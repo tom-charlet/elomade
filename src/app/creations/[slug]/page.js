@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import { getProduct } from '../../../services/Local'
 import { notFound } from 'next/navigation';
+import Seo from '@/lib/Seo'
 
 const Product = dynamic(() => import('../../../components/Product'));
 const Contact = dynamic(() => import('../../../components/Contact'));
@@ -20,8 +21,12 @@ export default async function ProductPage({ params }) {
 }
 
 export async function generateMetadata({ params }) {
+    const seo = Seo()
     const { slug } = await params
-    const server = getProduct(slug)?.seo ?? {}
+    const product = getProduct(slug)
 
-    return server
+    return {
+        ...seo,
+        title: product.title + " - Elomade",
+    }
 }

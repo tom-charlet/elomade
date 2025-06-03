@@ -22,9 +22,7 @@ export function Products() {
                 { url: "/hero.webp", alt: "Le big pouf" },
                 { url: null, alt: "Le big pouf" }
             ],
-            seo: {
-                title: "Le big pouf"
-            }
+            seo: {}
         },
         {
             title: "Le Big Pouf 2",
@@ -37,9 +35,6 @@ export function Products() {
             images: [
                 { url: "/hero.webp", alt: "Le big pouf" },
             ],
-            seo: {
-                title: "Le big pouf 2"
-            }
         },
         {
             title: null,
