@@ -27,6 +27,20 @@ export function Products() {
             seo: {}
         },
         {
+            title: "La Jupette",
+            slug: "la-jupette",
+            categories: [1],
+            available: true,
+            price: 65,
+            minPrice: null,
+            maxPrice: null,
+            text: `La Jupette est une pièce légère et structurée, entièrement crochetée à la main selon un patron original Elomade. Sa forme évasée et ses jeux de points ajourés lui donnent du mouvement et de la douceur, tout en conservant une belle tenue. Pensée pour l'été, elle se porte taille haute et se combine facilement avec un top ajusté ou un gilet court ou sur un maillot de bain.`,
+            images: [
+                { url: "/produits/la-jupette.webp", alt: "La Jupette" }
+            ],
+            seo: {}
+        },
+        {
             title: "Le Big pouf",
             slug: "le-big-pouf",
             categories: [3],
@@ -35,7 +49,10 @@ export function Products() {
             minPrice: null,
             maxPrice: null,
             text: `Pièce emblématique de la marque Elomade, ce grand pouf en crochet allie confort, style et savoir-faire artisanal. Doux au toucher et généreux en volume, il trouve facilement sa place dans un intérieur chaleureux, en assise d'appoint, repose-pieds ou simple objet déco. Une pièce forte, pensée pour durer.`,
-            images: null,
+            images: [
+                { url: "/produits/le-big-pouf.webp", alt: "Le Big pouf" },
+                { url: "/produits/le-big-pouf-2.webp", alt: "Le Big pouf - vue 2" },
+            ],
             seo: {}
         },
         {
@@ -54,8 +71,8 @@ export function Products() {
             seo: {}
         },
         {
-            title: "Le Clodine",
-            slug: "le-clodine",
+            title: "Le Claudine",
+            slug: "le-claudine",
             categories: [1, 2],
             available: true,
             price: 20,
@@ -63,7 +80,7 @@ export function Products() {
             maxPrice: null,
             text: `Accessoire délicat et intemporel, Le Claudine est un col amovible crocheté à la main avec précision. Il se noue simplement autour du cou pour transformer un pull, une robe ou un t-shirt en une pièce habillée et singulière. Léger, facile à porter, il ajoute une touche de caractère tout en restant adorable.`,
             images: [
-                { url: "/produits/le-col.webp", alt: "Le Clodine" }
+                { url: "/produits/le-col.webp", alt: "Le Claudine" }
             ],
             seo: {}
         },
@@ -82,18 +99,6 @@ export function Products() {
             ],
             seo: {}
         },
-        {
-            title: "La Jupette",
-            slug: "la-jupette",
-            categories: [1],
-            available: true,
-            price: 65,
-            minPrice: null,
-            maxPrice: null,
-            text: `La Jupette est une pièce légère et structurée, entièrement crochetée à la main selon un patron original Elomade. Sa forme évasée et ses jeux de points ajourés lui donnent du mouvement et de la douceur, tout en conservant une belle tenue. Pensée pour l'été, elle se porte taille haute et se combine facilement avec un top ajusté ou un gilet court ou sur un maillot de bain.`,
-            images: [
-            ],
-            seo: {}
-        },
+
     ]
 }
