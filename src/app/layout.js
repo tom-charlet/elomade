@@ -3,6 +3,7 @@ import { headers } from 'next/headers';
 import { GlobalContextProvider } from '../context/Global';
 import { Data } from '../lib/Global';
 import "./globals.css";
+// import { Analytics } from "@vercel/analytics/next"
 
 export default async function RootLayout({ children }) {
   const data = await Data()
