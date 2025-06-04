@@ -4,7 +4,7 @@ export function middleware(request) {
     const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
     const cspHeader = `
     default-src 'self' *.typekit.net www.youtube.com fonts.googleapis.com;
-    script-src 'self' 'nonce-${nonce}' *.gstatic.com;
+    script-src 'self' 'nonce-${nonce}' *.gstatic.com https://vercel.live;
     style-src 'self' 'unsafe-inline' *.typekit.net fonts.googleapis.com;
     img-src 'self' blob: data: purecatamphetamine.github.io;
     connect-src 'self' fonts.googleapis.com googletagmanager.com;
