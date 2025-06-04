@@ -26,9 +26,9 @@ const Contact = () => {
                     <Button icon="email" variante="stroke-beige" target="_blank" href="mailto:contact@elomade.fr" className="md:ml-1.5">contact@elomade.fr</Button>
                 </motion.div>
             </motion.div>
-            <motion.div variants={isMobile ? fadeUp : fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className='aspect-[16/12] sm:aspect-[16/10] w-full bg-beige-300 rounded-2xl overflow-hidden'>
+            <motion.div variants={isMobile ? fadeUp : fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} className='aspect-[16/12] sm:aspect-[16/11] w-full bg-beige-300 rounded-2xl overflow-hidden'>
                 <span className="w-full h-full scale-[1.12]">
-                    <Image src="/hero.webp" alt="Contact" width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
+                    <Image src="/produits/le-col.webp" alt="Contact" width={0} height={0} sizes='100vw' className='w-full h-full object-cover' />
                 </span>
             </motion.div>
         </div>
