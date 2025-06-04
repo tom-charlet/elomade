@@ -1,4 +1,5 @@
 'use client'
+
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -17,7 +18,7 @@ const Contact = () => {
         <div className='responsive-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-32 text-beige-300'>
             <motion.div variants={animation("stagger")} initial="hidden" whileInView="visible" viewport={{ once: true }} className='flex flex-col items-start'>
                 <MotionHeading variants={animation("fadeUp")} level="1" className="mb-6">Me contacter</MotionHeading>
-                <motion.p variants={animation("fadeUp")} className='mb-10 md:text-balance'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.</motion.p>
+                <motion.p variants={animation("fadeUp")} className='mb-10 md:text-balance'>Chaque modèle est unique, imaginé à partir de patrons originaux conçus par la créatrice Elomade et réalisé en petite quantité, dans une démarche de création lente et responsable.<br /><br />Les pièces sont confectionnées en flux tendu, sans stock : pour passer commande, il suffit de contacter Elomade par mail ou via les réseaux sociaux en précisant la taille souhaitée.</motion.p>
                 <motion.div variants={animation("fadeUp")} className='flex flex-col md:flex-row gap-3 w-full md:w-auto'>
                     <Button href="https://www.tiktok.com/@elomadecrochet" target="_blank" icon="tiktok" variante="fill-beige" className="basis-full md:basis-auto md:hidden">elomadecrochet</Button>
                     <Button href="https://www.instagram.com/elomadecrochet" target="_blank" icon="instagram" variante="fill-beige" className="basis-full md:basis-auto md:hidden">elomadecrochet</Button>
