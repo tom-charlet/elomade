@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 
 const Icon = dynamic(() => import('./Icon'))
 
-const Button = ({ children, href, tag, className, icon, variante, reverse, size, ...props }) => {
+const Button = ({ children, href, tag, className, icon, variante, reverse, size, disabled, ...props }) => {
     const Balise = tag ?? "button";
 
     let styleButton = `flex justify-center items-center gap-2 text-center rounded-full cursor-pointer font-semibold duration-800 ease-smooth-out group ${icon ? (children ? (reverse ? "pl-6 pr-5 py-4" : "pr-6 pl-5 py-4") : "size-14") : "px-6 py-4"} ${className ?? ""}`;
@@ -28,6 +28,7 @@ const Button = ({ children, href, tag, className, icon, variante, reverse, size,
         }
     }
 
+    if (disabled) styleButton = `${styleButton} bg-red-900/10 text-red-900/60 hover:bg-red-900/10 hover:text-red-900/60 hover:!scale-100 !cursor-not-allowed`
     if (!reverse) styleIcon += " -order-1"
 
     if (href) return <Link href={href} {...props} className={styleButton}>{children}{icon && <Icon name={icon} fill="auto" className={styleIcon} />}</Link>
