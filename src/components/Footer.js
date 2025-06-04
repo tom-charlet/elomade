@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 const Footer = () => {
     return <section className="bg-beige-300">
