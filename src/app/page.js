@@ -1,10 +1,16 @@
 import dynamic from 'next/dynamic'
 import Seo from '@/lib/Seo'
 
-const Building = dynamic(() => import('../components/Building'))
+const Hero = dynamic(() => import('../components/Hero'))
+const Products = dynamic(() => import('../components/Products'))
+const Contact = dynamic(() => import('../components/Contact'))
 
 export default function Home() {
-  return <Building />
+  return <>
+    <Hero />
+    <Products title="Les nouveautés" />
+    <Contact />
+  </>
 }
 
 export async function generateMetadata() {
