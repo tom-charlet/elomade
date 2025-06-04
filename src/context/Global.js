@@ -8,8 +8,8 @@ const GlobalContext = createContext();
 export const GlobalContextProvider = ({ children, data }) => {
     const isMobile = useIsMobile()
 
-    const variants = {
-        "stagger": {
+    const animations = {
+        stagger: {
             hidden: {},
             visible: {
                 transition: {
@@ -17,7 +17,7 @@ export const GlobalContextProvider = ({ children, data }) => {
                 }
             }
         },
-        "fadeUp": {
+        fadeUp: {
             hidden: {
                 opacity: 0,
                 y: 100,
@@ -33,7 +33,7 @@ export const GlobalContextProvider = ({ children, data }) => {
                 }
             }
         },
-        "fadeDown": {
+        fadeDown: {
             hidden: {
                 opacity: 0,
                 y: -100
@@ -47,7 +47,7 @@ export const GlobalContextProvider = ({ children, data }) => {
                 }
             }
         },
-        "slide": {
+        slide: {
             hidden: {
                 opacity: 0,
                 x: 100
@@ -61,7 +61,7 @@ export const GlobalContextProvider = ({ children, data }) => {
                 }
             }
         },
-        "fadeLeft": {
+        fadeLeft: {
             hidden: {
                 opacity: 0,
                 x: 100,
@@ -77,7 +77,7 @@ export const GlobalContextProvider = ({ children, data }) => {
                 }
             }
         },
-        "fadeRight": {
+        fadeRight: {
             hidden: {
                 opacity: 0,
                 x: -100,
@@ -93,7 +93,7 @@ export const GlobalContextProvider = ({ children, data }) => {
                 }
             }
         },
-        "hero": {
+        hero: {
             hidden: {
                 opacity: 0,
                 x: 50
@@ -109,11 +109,10 @@ export const GlobalContextProvider = ({ children, data }) => {
         }
     }
 
-    const animation = (name) => variants[name]
 
     return <GlobalContext.Provider value={{
         ...data,
-        animation,
+        animations,
         isMobile
     }}>
         {children}

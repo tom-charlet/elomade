@@ -1,33 +1,34 @@
-// import { Data as Products } from '../lib/Products';
+import { Products } from '../lib/Data';
 
 export default async function sitemap() {
-    // const products = await Products();
+    const products = Products();
 
     return [
         {
-            url: process.env.NEXT_PUBLIC_URL,
+            url: "https://elomade.fr",
             priority: 1,
         },
-        // {
-        //     url: process.env.NEXT_PUBLIC_URL + "/page",
-        //     changeFrequency: 'yearly',
-        //     priority: 0.8,
-        // },
-        // ...posts.map(item => {
-        //     return {
-        //         url: process.env.NEXT_PUBLIC_URL + '/posts/' + item.slug,
-        //         lastModified: item.updatedAt
-        //     }
-        // })
-        // {
-        //     url: process.env.NEXT_PUBLIC_URL + "/mentions-legales",
-        //     changeFrequency: 'yearly',
-        //     priority: 0.2,
-        // },
-        // {
-        //     url: process.env.NEXT_PUBLIC_URL + "/politique-de-confidentialite",
-        //     changeFrequency: 'yearly',
-        //     priority: 0.2,
-        // }
+        {
+            url: "https://elomade.fr/creations",
+            changeFrequency: 'yearly',
+            priority: 0.8,
+        },
+        ...products.map(item => {
+            return {
+                url: 'https://elomade.fr/creations/' + item.slug,
+                lastModified: "2025-06-04",
+                priority: 0.5
+            }
+        }),
+        {
+            url: "https://elomade.fr/mentions-legales",
+            changeFrequency: 'yearly',
+            priority: 0.2,
+        },
+        {
+            url: "https://elomade.fr/politique-de-confidentialite",
+            changeFrequency: 'yearly',
+            priority: 0.2,
+        }
     ]
 }

@@ -2,7 +2,7 @@
 
 import ReactMarkdown from 'react-markdown'
 
-const Text = ({ children, className }) => {
+const Text = ({ children }) => {
 
     return <ReactMarkdown>{children}</ReactMarkdown>
 }

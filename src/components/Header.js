@@ -5,19 +5,22 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { useGlobal } from '@/context/Global'
 import { motion } from 'framer-motion'
+import { fadeDown, stagger } from '@/utils/variants'
 
 const Button = dynamic(() => import('./Button'))
-const MotionLink = dynamic(() => import('./MotionLink'))
 
 const Header = () => {
-    const { animation } = useGlobal()
+    const { animations } = useGlobal()
 
-    return <header className='absolute top-0 left-0 w-full z-40'>
-        <motion.nav variants={animation("stagger")} initial="hidden" animate="visible" className='responsive-container pt-8 lg:pt-0 lg:h-28 flex items-center justify-center lg:justify-between'>
-            <MotionLink variants={animation("fadeDown")} href="/">
-                <Image src="/logo.svg" sizes='100vw' alt="Elomade" width={0} height={0} className='h-10 w-auto' />
-            </MotionLink>
-            <motion.ul variants={animation("fadeDown")} className='items-center gap-10 hidden lg:flex'>
+    if (!animations) return null
+    else return <header className='absolute top-0 left-0 w-full z-40'>
+        <motion.nav variants={stagger} initial="hidden" animate="visible" className='responsive-container pt-8 lg:pt-0 lg:h-28 flex items-center justify-center lg:justify-between'>
+            <motion.div variants={fadeDown}>
+                <Link href="/">
+                    <Image src="/logo.svg" sizes='100vw' alt="Elomade" width={0} height={0} className='h-10 w-auto' />
+                </Link>
+            </motion.div>
+            <motion.ul variants={fadeDown} className='items-center gap-10 hidden lg:flex'>
                 <li>
                     <Link href="/creations" className='font-semibold hover:text-red-700 duration-400 ease-smooth-out'>Les créations</Link>
                 </li>
