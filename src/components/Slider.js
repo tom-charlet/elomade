@@ -4,22 +4,19 @@ import { useRef, useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination, Mousewheel } from 'swiper/modules';
 import 'swiper/css/bundle';
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
+import { useGlobal } from '@/context/Global'
 
-const Slider = ({ children, pagination, animate, ...props }) => {
+const Slider = ({ children, pagination, animate, left, ...props }) => {
     const paginationRef = useRef(null);
     const [ready, setReady] = useState(false);
+    const { animation } = useGlobal()
 
     useEffect(() => {
         setReady(true);
     }, []);
 
-    return <motion.div
-        variants={animate ? variants : null}
-        viewport={{ once: true }}
-        initial="hidden"
-        whileInView="visible"
-        className='relative w-full'>
+    return <motion.div variants={animation("stagger")} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.4 }} className='relative w-full'>
         <Swiper
             {...props}
             slidesPerView={"auto"}
@@ -38,7 +35,7 @@ const Slider = ({ children, pagination, animate, ...props }) => {
             } : false}
         >
             {children?.map((item, index) => <SwiperSlide key={index} className='!w-auto'>
-                <motion.div variants={animate ? itemVariant : null} viewport={{ once: true }} className='!h-full'>{item}</motion.div>
+                <motion.div variants={animate ? (left ? animation("fadeLeft") : animation("slide")) : null} className='!h-full'>{item}</motion.div>
             </SwiperSlide>)}
         </Swiper>
         {pagination && <div className='absolute bottom-6 left-1/2 -translate-x-1/2 w-full flex z-40'>
@@ -48,26 +45,3 @@ const Slider = ({ children, pagination, animate, ...props }) => {
 }
 
 export default Slider
-
-const variants = {
-    visible: {
-        transition: {
-            staggerChildren: 0.05,
-        },
-    },
-};
-
-const itemVariant = {
-    hidden: {
-        opacity: 0,
-        x: 300
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1,
-            ease: [0.16, 1, 0.3, 1],
-        }
-    },
-};

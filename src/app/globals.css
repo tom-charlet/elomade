@@ -21,9 +21,13 @@ body {
   font-family: 'Raleway';
 }
 
+.clip-radius {
+  clip-path: inset(0 round 1rem);
+}
+
 @layer components {
   body {
-    @apply bg-beige-100 leading-[160%] text-red-900
+    @apply bg-beige-100 leading-[150%] text-red-900
   }
 
   .responsive-container {
@@ -42,4 +46,33 @@ body {
     @apply after:scale-120
   }
 
+  .post-text h1 {
+    @apply text-[32px] lg:text-[48px] font-semibold leading-[130%]
+  }
+  .post-text h2 {
+    @apply text-[28px] lg:text-[28px] font-semibold leading-[120%] border-b border-red-900/20 pb-4
+  }
+  .post-text h3 {
+    @apply text-[20px] font-semibold leading-[140%]
+  }
+  .post-text h4 {
+    @apply text-[18px] font-semibold leading-[140%]
+  }
+
+  .post-text > * + * {
+    @apply mt-6
+  }
+
+  .post-text > * + h2 {
+    @apply mt-12
+  }
+  .post-text > h2 + * {
+    @apply mt-6
+  }
+  .post-text > h1 + * {
+    @apply mt-12
+  }
+  .post-text a {
+    @apply underline underline-offset-2 text-red-700
+  }
 }
