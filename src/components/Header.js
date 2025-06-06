@@ -17,7 +17,7 @@ const Header = () => {
         <motion.nav variants={stagger} initial="hidden" animate="visible" className='responsive-container pt-8 lg:pt-0 lg:h-28 flex items-center justify-center lg:justify-between'>
             <motion.div variants={fadeDown}>
                 <Link href="/">
-                    <Image src="/logo.svg" sizes='100vw' alt="Elomade" width={0} height={0} className='h-10 w-auto' />
+                    <Image src="/logo-elomade.svg" sizes='100vw' alt="Elomade" width={0} height={0} className='h-10 w-auto' />
                 </Link>
             </motion.div>
             <motion.ul variants={fadeDown} className='items-center gap-10 hidden lg:flex'>
