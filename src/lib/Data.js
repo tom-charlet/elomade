@@ -9,6 +9,20 @@ export function Categories() {
 
 export function Products() {
     return [
+        // {
+        //     title: "titre",
+        //     slug: "slug",
+        //     categories: [0],
+        //     available: true,
+        //     price: 0,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "alt" },
+        //     ],
+        //     seo: {}
+        // },
         {
             title: "Le Gilet",
             slug: "le-gilet",
@@ -99,6 +113,117 @@ export function Products() {
             ],
             seo: {}
         },
-
+        // {
+        //     title: "Le Poncho",
+        //     slug: "le-poncho",
+        //     categories: [1],
+        //     available: true,
+        //     price: 65,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "Le poncho" },
+        //     ],
+        //     seo: {}
+        // },
+        // {
+        //     title: "Beanie",
+        //     slug: "beanie",
+        //     categories: [1, 2],
+        //     available: true,
+        //     price: 25,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "alt" },
+        //     ],
+        //     seo: {}
+        // },
+        // {
+        //     title: "Le bandeau",
+        //     slug: "le-bandeau",
+        //     categories: [2],
+        //     available: true,
+        //     price: 0,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "alt" },
+        //     ],
+        //     seo: {}
+        // },
+        // {
+        //     title: "titre",
+        //     slug: "slug",
+        //     categories: [0],
+        //     available: true,
+        //     price: 0,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "alt" },
+        //     ],
+        //     seo: {}
+        // },
+        // {
+        //     title: "titre",
+        //     slug: "slug",
+        //     categories: [0],
+        //     available: true,
+        //     price: 0,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "alt" },
+        //     ],
+        //     seo: {}
+        // },
+        // {
+        //     title: "titre",
+        //     slug: "slug",
+        //     categories: [0],
+        //     available: true,
+        //     price: 0,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "alt" },
+        //     ],
+        //     seo: {}
+        // },
+        // {
+        //     title: "titre",
+        //     slug: "slug",
+        //     categories: [0],
+        //     available: true,
+        //     price: 0,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "alt" },
+        //     ],
+        //     seo: {}
+        // },
+        // {
+        //     title: "titre",
+        //     slug: "slug",
+        //     categories: [0],
+        //     available: true,
+        //     price: 0,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `text`,
+        //     images: [
+        //         { url: "/produits/produits.webp", alt: "alt" },
+        //     ],
+        //     seo: {}
+        // }
     ]
 }

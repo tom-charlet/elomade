@@ -22,7 +22,7 @@ const Header = () => {
             </motion.div>
             <motion.ul variants={fadeDown} className='items-center gap-10 hidden lg:flex'>
                 <li>
-                    <Link href="/creations" className='font-semibold hover:text-red-700 duration-400 ease-smooth-out'>Les créations</Link>
+                    <Link href="/creations" className='font-semibold hover:text-red-700 duration-400 ease-smooth-out p-5 -m-5'>Les créations</Link>
                 </li>
                 <li>
                     <Button href="#me-contacter">Me contacter</Button>

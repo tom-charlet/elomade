@@ -17,7 +17,7 @@ const Products = ({ title, grid, slug }) => {
 
     const Filter = (item) => {
         if (slug && item.slug == slug) return false
-        if (filter > 0 && !item.categories?.find(e => e.id == filter)) return false
+        if (filter > 0 && !item.categories?.find(e => e?.id == filter)) return false
         else return item
     }
 
@@ -56,11 +56,11 @@ const Categories = ({ items, active, onChange }) => {
         if (isMobile) window.scroll({ top: 80, left: 0, behavior: "instant" })
     }
 
-    return <div className='sticky md:static top-0 left-0 bg-beige-100 z-40 mb-5 lg:mb-3'>
-        <Slider animate left className='w-full !px-2 md:!px-6 lg:!px-[44px] xl:!px-[92px] 2xl:!px-[140px]'>
+    return <div className='sticky md:static top-0 left-0 z-40 py-3 bg-beige-100  my-2'>
+        <Slider animate left spaceBetween={8} className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-[112px] 2xl:!px-[160px]'>
             {items?.map((item, index) => <NavItem key={index} index={index} active={active == index} onClick={() => handleFilter(item.id)}>{item.title}</NavItem>)}
         </Slider>
     </div>
 }
 
-const NavItem = ({ children, active, ...props }) => <button {...props} className={`font-semibold text-[16px] md:text-[18px] px-4 py-5 lg:p-5 cursor-pointer duration-800 ease-smooth-in-out ${active ? "text-red-700" : "hover:text-red-700 text-red-900/50"}`}>{children}</button>
+const NavItem = ({ children, active, ...props }) => <button {...props} className={`font-semibold text-[14px] px-5 py-3 rounded-full cursor-pointer duration-300 ease-smooth-in-out border ${active ? "bg-red-800 text-beige-300 border-red-800 hover:bg-red-700 hover:border-red-700" : "hover:scale-95 bg-beige-100 border border-red-200"}`}>{children}</button>
