@@ -14,7 +14,7 @@ const Text = dynamic(() => import('./Text'));
 const Product = ({ title, categories, images, price, minPrice, maxPrice, text, available }) => {
     const { isMobile } = useGlobal()
 
-    return <section className='responsive-container w-full mt-16 lg:mt-[112px] lg:min-h-[calc(100svh-112px)] py-16 lg:pb-16 lg:pt-12 flex flex-col lg:flex-row gap-10 lg:gap-20'>
+    return <section className='responsive-container w-full mt-16 lg:mt-[112px] py-16 lg:pb-16 lg:pt-12 flex flex-col lg:flex-row gap-10 lg:gap-20'>
         <motion.div variants={isMobile ? fadeUp : fadeRight} initial="hidden" whileInView="visible" viewport={{ once: true }} className='w-full lg:w-[60%] shrink-0 h-full'>
             {images?.length > 1 && <Slider
                 className="!aspect-[11/14] md:!aspect-[16/12] xl:!aspect-[16/10] lg:!w-full !rounded-3xl !max-h-[70svh] md:max-h-auto !w-full md:!w-auto"
