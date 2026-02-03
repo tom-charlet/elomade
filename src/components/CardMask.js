@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Heading = dynamic(() => import('./Heading'))
 
-const Card = ({ title, images, categories, slug, grid }) => {
+const Card = ({ title, image, categories, slug, grid }) => {
 
     return <div>
         <Link href={slug ? `/creations/${slug}` : ""} className={`h-full flex flex-col gap-5 group ${grid ? "w-full" : "w-[320px] lg:w-[385px]"}`}>
@@ -18,7 +18,7 @@ const Card = ({ title, images, categories, slug, grid }) => {
                     </mask>
                     <rect width="100" height="100" fill="auto" mask="url(#mask)" className='fill-beige-100' />
                 </svg>
-                <Image width={0} height={0} sizes='100vw' alt={images?.[0]?.alt ?? title ?? ""} src={images?.[0]?.url ?? "/placeholder.svg"} className='object-cover w-full h-full group-hover:scale-[0.95] duration-600 ease-smooth-out group-hover:delay-[50ms] delay-0' />
+                <Image width={0} height={0} sizes='100vw' alt={image?.alt ?? title ?? ""} src={image?.url ?? "/placeholder.svg"} className='object-cover w-full h-full group-hover:scale-[0.95] duration-600 ease-smooth-out group-hover:delay-[50ms] delay-0' />
             </span>
             <div className='flex flex-col gap-1.5'>
                 <Heading level="3">{title}</Heading>

@@ -45,4 +45,4 @@ Le site ne dépose actuellement aucun cookie.
 
 L’éditeur s’efforce de fournir des informations aussi précises que possible sur le site elomade.fr. Toutefois, il ne pourra être tenu responsable des omissions, inexactitudes ou carences dans la mise à jour, qu’elles soient de son fait ou de celui de tiers partenaires.
 
-**Dernière mise à jour** : 3 juin 2025
+**Dernière mise à jour** : 3 février 2026

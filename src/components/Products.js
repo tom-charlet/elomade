@@ -10,7 +10,7 @@ const Button = dynamic(() => import('./Button'))
 const Card = dynamic(() => import('./Card'))
 const Grid = dynamic(() => import('./Grid'))
 
-const Products = ({ title, grid, slug }) => {
+const Products = ({ title, grid, slug, limit }) => {
     const [filter, setFilter] = useState(0)
     const [allCategories, setAllCategories] = useState([])
     const { products, categories } = useGlobal()
@@ -37,7 +37,7 @@ const Products = ({ title, grid, slug }) => {
             <Grid items={products?.filter(Filter)} />
         </> : <>
             <Slider animate className='w-full !px-6 md:!px-10 lg:!px-16 xl:!px-28 2xl:!px-40' breakpoints={{ 0: { spaceBetween: 16 }, 1024: { spaceBetween: 24 } }}>
-                {products?.filter(Filter)?.map((item, index) => <Card key={index} {...item} />)}
+                {products?.filter(Filter)?.slice(0, limit)?.map((item, index) => <Card key={index} {...item} />)}
             </Slider>
             <div className='responsive-container md:hidden mt-10'>
                 <Button variante="stroke-red" icon="chevron-right" reverse href="/creations">En voir plus</Button>

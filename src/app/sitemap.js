@@ -16,7 +16,7 @@ export default async function sitemap() {
         ...products.map(item => {
             return {
                 url: 'https://elomade.fr/creations/' + item.slug,
-                lastModified: "2025-06-04",
+                lastModified: "2026-02-03",
                 priority: 0.5
             }
         }),

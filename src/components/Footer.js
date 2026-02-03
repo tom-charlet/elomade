@@ -11,6 +11,7 @@ const Footer = () => {
                 <li>
                     <Link href="/politique-de-confidentialite" className="font-semibold hover:text-red-700 duration-400 ease-smooth-out">Politique de confidentialité</Link>
                 </li>
+                <li>Site réalisé par <strong className="font-semibold">Tom Charlet</strong></li>
             </ul>
         </div>
     </section>

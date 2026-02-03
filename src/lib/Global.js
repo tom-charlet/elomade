@@ -9,6 +9,11 @@ export async function Data() {
             return {
                 id: id + 1,
                 ...product,
+                image: {
+                    ...product?.images[0],
+                    url: product?.images[0]?.url,
+                    alt: product?.images[0]?.alt ?? product.title
+                },
                 categories: product.categories?.map(id => {
                     return categories?.find(e => e.id == id) ?? null
                 }) ?? []

@@ -9,20 +9,214 @@ export function Categories() {
 
 export function Products() {
     return [
-        // {
-        //     title: "titre",
-        //     slug: "slug",
-        //     categories: [0],
-        //     available: true,
-        //     price: 0,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "alt" },
-        //     ],
-        //     seo: {}
-        // },
+        {
+            title: "Bonnet Ajouré",
+            slug: "bonnet-ajoure",
+            categories: [2],
+            available: true,
+            price: 20,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce bonnet ajouré en crochet est réalisé entièrement à la main. Ses mailles ouvertes et sa forme souple en font un accessoire agréable à porter au quotidien ou pour compléter une tenue. Inspiré des années 70, il apporte une touche rétro tout en restant intemporel. Il peut être décliné avec la couleur et le motif de votre choix, selon vos envies.`,
+            images: [
+                { url: "/produits/bonnet-ajoure-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/bonnet-ajoure-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/bonnet-ajoure-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/bonnet-ajoure-4.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/bonnet-ajoure-5.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/bonnet-ajoure-6.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Bandana",
+            slug: "bandana",
+            categories: [2],
+            available: true,
+            price: 18,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce bandana en crochet est réalisé entièrement à la main, avec des mailles fines au style dentelle. Pensé comme un accessoire polyvalent, il se porte aussi bien dans les cheveux qu’autour de la taille pour compléter une tenue. Il est disponible dans la couleur de votre choix, selon vos envies.`,
+            images: [
+                { url: "/produits/bandana-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/bandana-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/bandana-1.webp", caption: "Photo : @iiunaaa" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Rose à nouer",
+            slug: "rose-a-nouer",
+            categories: [2],
+            available: true,
+            price: 10,
+            minPrice: null,
+            maxPrice: null,
+            text: `Cette rose en crochet est réalisée entièrement à la main. Pensée comme un accessoire modulable, elle se porte aussi bien autour du cou, au poignet, à la ceinture ou intégrée à une tenue. Elle peut être déclinée dans toutes les couleurs, selon vos envies.`,
+            images: [
+                { url: "/produits/rose-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/rose-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/rose-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+        },
+        {
+            title: "Gilet Granny",
+            slug: "gilet-granny",
+            categories: [1],
+            available: true,
+            price: 125,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce gilet en crochet est réalisé entièrement à la main à partir de granny squares assemblés. Sa coupe ample et sa maille généreuse en font une pièce confortable et enveloppante, idéale pour le quotidien. Il peut être décliné en plusieurs associations de couleurs ou en version unie, selon vos envies.`,
+            images: [
+                { url: "/produits/granny-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/granny-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/granny-3.webp" },
+                { url: "/produits/granny-4.webp" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Pull Dreamy",
+            slug: "pull-dreamy",
+            categories: [1],
+            available: true,
+            price: 65,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce pull en crochet est réalisé entièrement à la main. Sa coupe confortable et ses manches courtes en font une pièce agréable à porter au quotidien, quelle que soit la saison. Il peut être décliné en plusieurs associations de couleurs ou en version unie, selon vos envies.`,
+            images: [
+                { url: "/produits/dreamy-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/dreamy-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/dreamy-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+        },
+        {
+            title: "Foulard à nouer",
+            slug: "foulard-a-nouer",
+            categories: [2],
+            available: true,
+            price: 25,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce foulard en crochet est réalisé entièrement à la main. Sa forme et sa texture en font un accessoire idéal à nouer sur les épaules pour finaliser une tenue, ou même dans les cheveux. Il se marie particulièrement bien avec un pull ou une chemise, et peut être réalisé uni ou dans plusieurs couleurs, selon vos envies.`,
+            images: [
+                { url: "/produits/foulard-a-nouer-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/foulard-a-nouer-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Foulard Simple",
+            slug: "foulard-simple",
+            categories: [2],
+            available: true,
+            price: 20,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce foulard en crochet est réalisé entièrement à la main. Sa texture douce et légère en fait un accessoire élégant et agréable à porter, que ce soit dans les cheveux, sur les épaules ou autour du cou. Il est disponible dans la couleur de votre choix, selon vos envies.`,
+            images: [
+                { url: "/produits/foulard-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/foulard-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/foulard-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Foulard Fan",
+            slug: "flouard-fan",
+            categories: [2],
+            available: true,
+            price: 45,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce foulard en crochet est réalisé entièrement à la main, avec des mailles fines au style dentelle. Élégant et léger, il se porte autour du cou, sur les épaules ou dans les cheveux pour compléter une tenue. Il est disponible dans la couleur de votre choix, selon vos envies.`,
+            images: [
+                { url: "/produits/foulard-fan-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/foulard-fan-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/foulard-fan-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Béguin",
+            slug: "beguin",
+            categories: [2],
+            available: true,
+            price: 25,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce béguin en crochet est réalisé entièrement à la main. Sa forme délicate et sa finition à nouer au cou en font un accessoire mignon et au charme vintage, idéal pour compléter une tenue. Il est disponible dans la couleur de votre choix, selon vos envies.`,
+            images: [
+                { url: "/produits/beguin-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/beguin-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Bonnet oreilles de chat",
+            slug: "bonnet-oreilles-de-chat",
+            categories: [2],
+            available: true,
+            price: 30,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce bonnet en crochet est réalisé entièrement à la main. Sa forme, avec les oreilles de chat directement créées dans la maille, en fait un accessoire confortable et original. Il peut être réalisé uni ou dans plusieurs couleurs, selon vos envies.`,
+            images: [
+                { url: "/produits/bonnet-oreilles-de-chat-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/bonnet-oreilles-de-chat-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Beanies",
+            slug: "beanies",
+            categories: [2],
+            available: true,
+            price: 30,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ces bonnets unisexe, faits main en crochet, sont faciles à assortir et apportent une touche colorée à toutes vos tenues. Les jeux de rayures et d’associations de couleurs rendent chaque modèle unique. Il peut être décliné en plusieurs associations de couleurs ou en version unie, selon vos envies.`,
+            images: [
+                { url: "/produits/beanie-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/beanie-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/beanie-3.webp" }
+            ],
+            seo: {}
+        },
+        {
+            title: "Short",
+            slug: "short",
+            categories: [1],
+            available: true,
+            price: 55,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce short en crochet est réalisé entièrement à la main. Sa coupe confortable est pensée avec un revers modulable, permettant de le porter en taille haute ou de le replier pour un effet taille mi-basse. Il est disponible en version rayée ou uni, selon vos envies.`,
+            images: [
+                { url: "/produits/short-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/short-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/short-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/short-4.webp" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Poncho",
+            slug: "poncho",
+            categories: [1],
+            available: true,
+            price: 55,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce poncho en crochet est réalisé entièrement à la main. Sa maille fine et délicate en fait un accessoire léger et élégant, idéal pour compléter toutes les tenues. Il peut être décliné en plusieurs associations de couleurs ou en version unie, selon vos envies.`,
+            images: [
+                { url: "/produits/poncho-1.webp" },
+                { url: "/produits/poncho-2.webp" },
+                { url: "/produits/poncho-3.webp" },
+            ],
+            seo: {}
+        },
         {
             title: "Le Gilet",
             slug: "le-gilet",
@@ -74,7 +268,7 @@ export function Products() {
         {
             title: "Mon Chouchou",
             slug: "mon-chouchou",
-            categories: [1, 2],
+            categories: [2],
             available: true,
             price: 15,
             minPrice: null,
@@ -89,7 +283,7 @@ export function Products() {
         {
             title: "Le Claudine",
             slug: "le-claudine",
-            categories: [1, 2],
+            categories: [2],
             available: true,
             price: 30,
             minPrice: null,
@@ -115,117 +309,5 @@ export function Products() {
             ],
             seo: {}
         },
-        // {
-        //     title: "Le Poncho",
-        //     slug: "le-poncho",
-        //     categories: [1],
-        //     available: true,
-        //     price: 65,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "Le poncho" },
-        //     ],
-        //     seo: {}
-        // },
-        // {
-        //     title: "Beanie",
-        //     slug: "beanie",
-        //     categories: [1, 2],
-        //     available: true,
-        //     price: 30,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "alt" },
-        //     ],
-        //     seo: {}
-        // },
-        // {
-        //     title: "Le bandeau",
-        //     slug: "le-bandeau",
-        //     categories: [2],
-        //     available: true,
-        //     price: 0,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "alt" },
-        //     ],
-        //     seo: {}
-        // },
-        // {
-        //     title: "titre",
-        //     slug: "slug",
-        //     categories: [0],
-        //     available: true,
-        //     price: 0,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "alt" },
-        //     ],
-        //     seo: {}
-        // },
-        // {
-        //     title: "titre",
-        //     slug: "slug",
-        //     categories: [0],
-        //     available: true,
-        //     price: 0,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "alt" },
-        //     ],
-        //     seo: {}
-        // },
-        // {
-        //     title: "titre",
-        //     slug: "slug",
-        //     categories: [0],
-        //     available: true,
-        //     price: 0,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "alt" },
-        //     ],
-        //     seo: {}
-        // },
-        // {
-        //     title: "titre",
-        //     slug: "slug",
-        //     categories: [0],
-        //     available: true,
-        //     price: 0,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "alt" },
-        //     ],
-        //     seo: {}
-        // },
-        // {
-        //     title: "titre",
-        //     slug: "slug",
-        //     categories: [0],
-        //     available: true,
-        //     price: 0,
-        //     minPrice: null,
-        //     maxPrice: null,
-        //     text: `text`,
-        //     images: [
-        //         { url: "/produits/produits.webp", alt: "alt" },
-        //     ],
-        //     seo: {}
-        // }
     ]
 }

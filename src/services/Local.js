@@ -9,6 +9,12 @@ export const getProduct = (slug) => {
 
         if (product) return {
             ...product,
+            images: product?.images?.map((item, index) => {
+                return {
+                    ...item,
+                    alt: item.alt ?? `${product.title} ${index + 1}`
+                }
+            }),
             categories: product.categories?.map(id => {
                 return categories?.find(e => e.id == id) ?? null
             }) ?? []
