@@ -222,8 +222,9 @@ export function Products() {
             slug: "le-gilet",
             categories: [1],
             available: true,
-            minPrice: 90,
-            maxPrice: 110,
+            price: 90,
+            minPrice: null,
+            maxPrice: null,
             text: `Ce gilet en crochet est réalisé entièrement à la main, avec soin et précision. Sa coupe confortable et ses finitions soignées en font une pièce facile à porter au quotidien. Il se superpose aisément à toutes les tenues pour apporter une touche artisanale.\n\n- Matières synthétiques : 90,00 €\n- Matières nobles : 110,00 €
             `,
             images: [
