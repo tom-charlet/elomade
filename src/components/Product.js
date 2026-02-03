@@ -23,14 +23,14 @@ const Product = ({ title, categories, images, price, minPrice, maxPrice, text, a
                 freeMode={true}
                 mousewheel={true}
             >
-                {images.map((item, index) => <span key={index} className='w-auto h-auto bg-beige-300 relative'>
+                {images.map((item, index) => <div key={index} className='w-auto h-full bg-beige-300 relative'>
                     <Image key={index} src={item.url ?? "/placeholder.svg"} alt={item.alt ?? title} width={0} height={0} sizes='100vw' className={`rounded-3xl w-auto h-full object-cover min-w-[80svw] md:min-w-[50svw] ${images?.length == 2 ? "lg:min-w-[calc(25svw-32px)]" : "lg:min-w-auto"}`} />
-                    {item?.caption && <span className='px-0 pb-0 absolute bottom-0 left-0 w-full flex justify-center rounded-b-3xl bg-black/20'>
+                    {item?.caption && <span className='px-0 pb-0 absolute bottom-0 left-0 w-full flex justify-center rounded-b-3xl bg-black/20 min-w-full'>
                         <span className='text-[10px] py-px text-center text-white/80 font-light px-1.5'>
                             {item?.caption}
                         </span>
                     </span>}
-                </span>)}
+                </div>)}
             </Slider>}
             {(!images || images?.length == 0 || images?.length == 1) && <Image src={images?.length > 0 ? images[0]?.url : "/placeholder.svg"} alt={images?.length > 0 ? (images[0]?.alt ?? title) : "Aucune photo"} width={0} height={0} sizes='100vw' className={`rounded-3xl w-full ${!images || images?.length == 0 ? "aspect-[9/10]" : "h-auto"} h-auto md:aspect-[16/12] xl:aspect-[16/10] object-cover max-h-[70svh]`} />}
         </motion.div>

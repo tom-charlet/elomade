@@ -33,7 +33,7 @@ const Slider = ({ children, pagination, animate, left, ...props }) => {
                 type: "bullets"
             } : false}
         >
-            {children?.map((item, index) => <SwiperSlide key={index} className='!w-auto'>
+            {children?.map((item, index) => <SwiperSlide key={index} className='!w-auto !h-full'>
                 <motion.div variants={animate ? (left ? fadeLeft : slide) : null} className='!h-full'>{item}</motion.div>
             </SwiperSlide>)}
         </Swiper>
