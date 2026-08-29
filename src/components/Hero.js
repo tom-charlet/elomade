@@ -21,7 +21,7 @@ const Hero = () => {
                     <Heading level="1" className="mb-4 lg:mb-6 lg:text-[52px] lg:max-w-[560px] text-balance">Création de vêtements et d’accessoires en crochet faits main</Heading>
                 </motion.div>
                 <motion.div variants={fadeUp}>
-                    <h2 className='mb-12 font-normal text-[18px] lg:max-w-[450px] text-balance'>Découvrez des pièces <strong className='font-semibold'>uniques et durables</strong>,<br className='hidden lg:block' /> mettant à l’honneur la <strong className='font-semibold'>seconde main</strong> <br className='hidden lg:block' />et le <strong className='font-semibold'>savoir-faire artisanal</strong>.</h2>
+                    <h2 className='mb-8 md:mb-12 font-normal text-[18px] lg:max-w-[450px] text-balance'>Découvrez des pièces <strong className='font-semibold'>uniques et durables</strong>,<br className='hidden lg:block' /> mettant à l’honneur la <strong className='font-semibold'>seconde main</strong> <br className='hidden lg:block' />et le <strong className='font-semibold'>savoir-faire artisanal</strong>.</h2>
                 </motion.div>
                 <motion.div variants={fadeUp}>
                     <Button variants={fadeUp} icon="chevron-right" reverse className="md:self-start" href="#les-creations" variante="stroke-beige">Découvrir l&apos;univers</Button>
