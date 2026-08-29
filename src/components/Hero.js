@@ -34,7 +34,7 @@ const Hero = () => {
                         initial={{ x: "50px", opacity: 0.96 }}
                         animate={{ x: "0px", opacity: 1 }}
                         transition={{ duration: 2, ease: cubicBezier(0, 0.55, 0.45, 1) }}
-                        className='relative h-full w-[150vw] md:w-full md:aspect-16/8 max-w-full max-h-full grid'>
+                        className='relative h-full w-[200vw] md:w-full md:aspect-16/8 max-w-full max-h-full grid'>
                         <Image
                             fill
                             src="/hero-2.webp"
