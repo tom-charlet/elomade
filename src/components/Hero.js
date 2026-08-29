@@ -16,7 +16,7 @@ const Hero = () => {
 
     return <section ref={ref} className='overflow-hidden'>
         <div className='relative lg:pt-28 min-h-svh flex flex-col items-center justify-end lg:items-start lg:justify-start overflow-hidden bg-beige-300'>
-            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className='flex flex-col lg:items-start responsive-container  pb-16 lg:pb-12 lg:py-[10svh] xl:py-[15svh] z-20 text-beige-100 pt-40 lg:pt-6'>
+            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className='flex flex-col lg:items-start responsive-container  pb-16 lg:pb-12 lg:py-[10svh] xl:py-[15svh] z-20 text-beige-100 pt-40'>
                 <motion.div variants={fadeUp}>
                     <Heading level="1" className="mb-4 lg:mb-6 lg:text-[52px] lg:max-w-[560px] text-balance">Création de vêtements et d’accessoires en crochet faits main</Heading>
                 </motion.div>
@@ -35,12 +35,10 @@ const Hero = () => {
                         animate={{ x: "0px", opacity: 1 }}
                         transition={{ duration: 2, ease: cubicBezier(0, 0.55, 0.45, 1) }}
                         className='relative h-full w-[200vw] md:w-full md:aspect-16/8 max-w-full max-h-full grid'>
-                        <Image
-                            fill
+                        <img
                             src="/hero-2.webp"
                             alt="hero"
-                            priority
-                            className="w-full h-full object-cover scale-130 translate-x-[25%] md:translate-x-[20%] lg:translate-x-[10%] -translate-y-[5%] lg:translate-y-[5%]"
+                            className="inset-0 absolute w-full h-full object-cover scale-130 translate-x-[25%] md:translate-x-[20%] lg:translate-x-[10%] -translate-y-[5%] lg:translate-y-[5%]"
                         />
                     </m.div>
                 </LazyMotion>
