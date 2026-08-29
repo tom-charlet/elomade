@@ -27,20 +27,20 @@ const Hero = () => {
                     <Button variants={fadeUp} icon="chevron-right" reverse className="md:self-start" href="#les-creations" variante="stroke-beige">Découvrir l&apos;univers</Button>
                 </motion.div>
             </motion.div>
-            <div className='absolute inset-0 grid items-center justify-center after:content-[""] after:absolute after:inset-0 after:z-10 after:lg:hidden after:bg-[linear-gradient(180deg,rgba(0,0,0,0)_40%,rgba(0,0,0,0.4)_100%)]'>
+            <div className='absolute inset-0 grid items-center justify-center after:content-[""] after:absolute after:inset-0 after:z-10 after:lg:hidden after:bg-[linear-gradient(180deg,rgba(0,0,0,0)_40%,rgba(0,0,0,0.4)_100%)] h-full w-full'>
                 <LazyMotion features={domAnimation}>
                     <m.div
                         style={{ y: y ?? null }}
                         initial={{ x: "50px", opacity: 0.96 }}
                         animate={{ x: "0px", opacity: 1 }}
                         transition={{ duration: 2, ease: cubicBezier(0, 0.55, 0.45, 1) }}
-                        className='relative h-full aspect-[16/8] max-w-full max-h-full'>
+                        className='relative h-full w-full aspect-16/8 max-w-full max-h-full grid'>
                         <Image
                             fill
                             src="/hero-2.webp"
                             alt="hero"
                             priority
-                            className="object-cover scale-130 translate-x-[25%] md:translate-x-[20%] lg:translate-x-[10%] -translate-y-[5%] lg:translate-y-[5%]"
+                            className="w-full h-full object-cover scale-130 translate-x-[25%] md:translate-x-[20%] lg:translate-x-[10%] -translate-y-[5%] lg:translate-y-[5%]"
                         />
                     </m.div>
                 </LazyMotion>
