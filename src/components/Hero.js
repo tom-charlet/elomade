@@ -27,7 +27,7 @@ const Hero = () => {
                     <Button variants={fadeUp} icon="chevron-right" reverse className="md:self-start" href="#les-creations" variante="stroke-beige">Découvrir l&apos;univers</Button>
                 </motion.div>
             </motion.div>
-            <div className='absolute bg-beige-300 grid items-center justify-center after:content-[""] after:absolute after:inset-0 after:z-10 after:lg:hidden after:bg-[linear-gradient(180deg,rgba(0,0,0,0)_40%,rgba(0,0,0,0.4)_100%)] h-full w-full'>
+            <div className='absolute w-full top-0 left-0 h-full bg-beige-300 grid items-center justify-center after:content-[""] after:absolute after:inset-0 after:z-10 after:lg:hidden after:bg-[linear-gradient(180deg,rgba(0,0,0,0)_40%,rgba(0,0,0,0.4)_100%)]'>
                 <LazyMotion features={domAnimation}>
                     <m.div
                         style={{ y: y ?? null }}
