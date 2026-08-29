@@ -16,31 +16,29 @@ const Hero = () => {
 
     return <section ref={ref} className='overflow-hidden'>
         <div className='relative lg:pt-28 min-h-svh flex flex-col items-center justify-end lg:items-start lg:justify-start overflow-hidden bg-beige-300'>
-            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className='flex flex-col lg:items-start responsive-container pt-6 pb-16 lg:pb-12 lg:py-[10svh] xl:py-[15svh] z-20 text-beige-100'>
+            <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className='flex flex-col lg:items-start responsive-container  pb-16 lg:pb-12 lg:py-[10svh] xl:py-[15svh] z-20 text-beige-100 pt-40'>
                 <motion.div variants={fadeUp}>
                     <Heading level="1" className="mb-4 lg:mb-6 lg:text-[52px] lg:max-w-[560px] text-balance">Création de vêtements et d’accessoires en crochet faits main</Heading>
                 </motion.div>
                 <motion.div variants={fadeUp}>
-                    <h2 className='mb-12 font-normal text-[18px] lg:max-w-[450px] text-balance'>Découvrez des pièces <strong className='font-semibold'>uniques et durables</strong>,<br className='hidden lg:block' /> mettant à l’honneur la <strong className='font-semibold'>seconde main</strong> <br className='hidden lg:block' />et le <strong className='font-semibold'>savoir-faire artisanal</strong>.</h2>
+                    <h2 className='mb-8 md:mb-12 font-normal text-[18px] lg:max-w-[450px] text-balance'>Découvrez des pièces <strong className='font-semibold'>uniques et durables</strong>,<br className='hidden lg:block' /> mettant à l’honneur la <strong className='font-semibold'>seconde main</strong> <br className='hidden lg:block' />et le <strong className='font-semibold'>savoir-faire artisanal</strong>.</h2>
                 </motion.div>
                 <motion.div variants={fadeUp}>
                     <Button variants={fadeUp} icon="chevron-right" reverse className="md:self-start" href="#les-creations" variante="stroke-beige">Découvrir l&apos;univers</Button>
                 </motion.div>
             </motion.div>
-            <div className='absolute inset-0 grid items-center justify-center after:content-[""] after:absolute after:inset-0 after:z-10 after:lg:hidden after:bg-[linear-gradient(180deg,rgba(0,0,0,0)_40%,rgba(0,0,0,0.4)_100%)] h-full w-full'>
+            <div className='absolute w-full top-0 left-0 h-full bg-beige-300 grid items-center justify-center after:content-[""] after:absolute after:inset-0 after:z-10 after:lg:hidden after:bg-[linear-gradient(180deg,rgba(0,0,0,0)_40%,rgba(0,0,0,0.4)_100%)]'>
                 <LazyMotion features={domAnimation}>
                     <m.div
                         style={{ y: y ?? null }}
                         initial={{ x: "50px", opacity: 0.96 }}
                         animate={{ x: "0px", opacity: 1 }}
                         transition={{ duration: 2, ease: cubicBezier(0, 0.55, 0.45, 1) }}
-                        className='relative h-full w-full aspect-16/8 max-w-full max-h-full grid'>
-                        <Image
-                            fill
+                        className='relative h-full w-[200vw] md:w-full md:aspect-16/8 max-w-full max-h-full grid'>
+                        <img
                             src="/hero-2.webp"
                             alt="hero"
-                            priority
-                            className="w-full h-full object-cover scale-130 translate-x-[25%] md:translate-x-[20%] lg:translate-x-[10%] -translate-y-[5%] lg:translate-y-[5%]"
+                            className="inset-0 absolute w-full h-full object-cover scale-130 translate-x-[25%] md:translate-x-[20%] lg:translate-x-[10%] -translate-y-[5%] lg:translate-y-[5%]"
                         />
                     </m.div>
                 </LazyMotion>
