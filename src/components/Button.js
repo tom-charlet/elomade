@@ -10,6 +10,10 @@ const Button = ({ children, href, tag, className, icon, variante, reverse, size,
     let styleIcon = `duration-800 ease-smooth-out ${size == "sm" ? "size-4" : "size-5"}`
 
     switch (variante) {
+        case "stroke-beige-full": {
+            styleButton += " border border-beige-300 hover:border-beige-100 hover:text-beige-100 hover:scale-105 text-beige-100"
+            styleIcon += " fill-beige-300 group-hover:fill-beige-100"
+        } break
         case "stroke-beige": {
             styleButton += " border border-beige-300 hover:border-beige-100 hover:text-beige-100 hover:scale-105"
             styleIcon += " fill-beige-300 group-hover:fill-beige-100"
