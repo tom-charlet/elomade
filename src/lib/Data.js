@@ -9,7 +9,70 @@ export function Categories() {
 
 export function Products() {
     return [
-
+        {
+            title: "Foulard Fan",
+            slug: "flouard-fan",
+            categories: [2],
+            available: true,
+            price: 45,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce foulard en crochet est réalisé entièrement à la main, avec des mailles fines au style dentelle. Élégant et léger, il se porte autour du cou, sur les épaules ou dans les cheveux pour compléter une tenue. Il est disponible dans la couleur de votre choix, selon vos envies.`,
+            images: [
+                { url: "/produits/foulard-fan-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/foulard-fan-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/foulard-fan-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Le Big pouf",
+            slug: "le-big-pouf",
+            categories: [3],
+            available: true,
+            price: 150,
+            minPrice: null,
+            maxPrice: null,
+            text: `Pièce emblématique de la marque Elomade, ce grand pouf en crochet allie confort, style et savoir-faire artisanal. Doux au toucher et généreux en volume, il trouve facilement sa place dans un intérieur chaleureux, en assise d'appoint, repose-pieds ou simple objet déco. Une pièce forte, pensée pour durer.`,
+            images: [
+                { url: "/produits/le-big-pouf.webp", alt: "Le Big pouf" },
+                { url: "/produits/le-big-pouf-2.webp", alt: "Le Big pouf - vue 2" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Gilet Granny",
+            slug: "gilet-granny",
+            categories: [1],
+            available: true,
+            price: 135,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ce gilet en crochet est réalisé entièrement à la main à partir de granny squares assemblés. Sa coupe ample et sa maille généreuse en font une pièce confortable et enveloppante, idéale pour le quotidien. Il peut être décliné en plusieurs associations de couleurs ou en version unie, selon vos envies.`,
+            images: [
+                { url: "/produits/granny-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/granny-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/granny-3.webp" },
+                { url: "/produits/granny-4.webp" },
+            ],
+            seo: {}
+        },
+        {
+            title: "Beanies",
+            slug: "beanies",
+            categories: [2],
+            available: true,
+            price: 25,
+            minPrice: null,
+            maxPrice: null,
+            text: `Ces bonnets unisexe, faits main en crochet, sont faciles à assortir et apportent une touche colorée à toutes vos tenues. Les jeux de rayures et d’associations de couleurs rendent chaque modèle unique. Il peut être décliné en plusieurs associations de couleurs ou en version unie, selon vos envies.`,
+            images: [
+                { url: "/produits/beanie-3.webp" },
+                { url: "/produits/beanie-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+                { url: "/produits/beanie-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
+            ],
+            seo: {}
+        },
         {
             title: "Short",
             slug: "short",
@@ -61,21 +124,21 @@ export function Products() {
             ],
             seo: {}
         },
-        {
-            title: "Le Top Rosa",
-            slug: "le-top-rosa",
-            categories: [1],
-            available: true,
-            price: 45,
-            minPrice: null,
-            maxPrice: null,
-            text: `Avec sa coupe courte et ajustée, le top Rosa est une pièce élégante et minimaliste, entièrement crochetée à la main. Son détail signature : une ou deux fleurs en relief qui ferment délicatement le devant, pour une touche de romantisme. Léger, confortable et facile à porter, il se marie aussi bien avec un jean qu'une jupe taille haute.`,
-            images: [
-                { url: "/produits/le-top-rosa.webp", alt: "Le Top Rosa" },
-                { url: "/produits/le-top-rosa-2.webp", alt: "Le Top Rosa - vue 2" }
-            ],
-            seo: {}
-        },
+        // {
+        //     title: "Le Top Rosa",
+        //     slug: "le-top-rosa",
+        //     categories: [1],
+        //     available: true,
+        //     price: 45,
+        //     minPrice: null,
+        //     maxPrice: null,
+        //     text: `Avec sa coupe courte et ajustée, le top Rosa est une pièce élégante et minimaliste, entièrement crochetée à la main. Son détail signature : une ou deux fleurs en relief qui ferment délicatement le devant, pour une touche de romantisme. Léger, confortable et facile à porter, il se marie aussi bien avec un jean qu'une jupe taille haute.`,
+        //     images: [
+        //         { url: "/produits/le-top-rosa.webp", alt: "Le Top Rosa" },
+        //         { url: "/produits/le-top-rosa-2.webp", alt: "Le Top Rosa - vue 2" }
+        //     ],
+        //     seo: {}
+        // },
         {
             title: "Bandana",
             slug: "bandana",
@@ -112,21 +175,6 @@ export function Products() {
             seo: {}
         },
         {
-            title: "Le Big pouf",
-            slug: "le-big-pouf",
-            categories: [3],
-            available: true,
-            price: 150,
-            minPrice: null,
-            maxPrice: null,
-            text: `Pièce emblématique de la marque Elomade, ce grand pouf en crochet allie confort, style et savoir-faire artisanal. Doux au toucher et généreux en volume, il trouve facilement sa place dans un intérieur chaleureux, en assise d'appoint, repose-pieds ou simple objet déco. Une pièce forte, pensée pour durer.`,
-            images: [
-                { url: "/produits/le-big-pouf.webp", alt: "Le Big pouf" },
-                { url: "/produits/le-big-pouf-2.webp", alt: "Le Big pouf - vue 2" },
-            ],
-            seo: {}
-        },
-        {
             title: "Pull Dreamy",
             slug: "pull-dreamy",
             categories: [1],
@@ -157,39 +205,6 @@ export function Products() {
             ],
         },
         {
-            title: "Gilet Granny",
-            slug: "gilet-granny",
-            categories: [1],
-            available: true,
-            price: 125,
-            minPrice: null,
-            maxPrice: null,
-            text: `Ce gilet en crochet est réalisé entièrement à la main à partir de granny squares assemblés. Sa coupe ample et sa maille généreuse en font une pièce confortable et enveloppante, idéale pour le quotidien. Il peut être décliné en plusieurs associations de couleurs ou en version unie, selon vos envies.`,
-            images: [
-                { url: "/produits/granny-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
-                { url: "/produits/granny-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
-                { url: "/produits/granny-3.webp" },
-                { url: "/produits/granny-4.webp" },
-            ],
-            seo: {}
-        },
-        {
-            title: "Foulard Fan",
-            slug: "flouard-fan",
-            categories: [2],
-            available: true,
-            price: 45,
-            minPrice: null,
-            maxPrice: null,
-            text: `Ce foulard en crochet est réalisé entièrement à la main, avec des mailles fines au style dentelle. Élégant et léger, il se porte autour du cou, sur les épaules ou dans les cheveux pour compléter une tenue. Il est disponible dans la couleur de votre choix, selon vos envies.`,
-            images: [
-                { url: "/produits/foulard-fan-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
-                { url: "/produits/foulard-fan-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
-                { url: "/produits/foulard-fan-3.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
-            ],
-            seo: {}
-        },
-        {
             title: "Béguin",
             slug: "beguin",
             categories: [2],
@@ -201,22 +216,6 @@ export function Products() {
             images: [
                 { url: "/produits/beguin-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
                 { url: "/produits/beguin-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
-            ],
-            seo: {}
-        },
-        {
-            title: "Beanies",
-            slug: "beanies",
-            categories: [2],
-            available: true,
-            price: 30,
-            minPrice: null,
-            maxPrice: null,
-            text: `Ces bonnets unisexe, faits main en crochet, sont faciles à assortir et apportent une touche colorée à toutes vos tenues. Les jeux de rayures et d’associations de couleurs rendent chaque modèle unique. Il peut être décliné en plusieurs associations de couleurs ou en version unie, selon vos envies.`,
-            images: [
-                { url: "/produits/beanie-3.webp" },
-                { url: "/produits/beanie-2.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
-                { url: "/produits/beanie-1.webp", caption: "Photo : @iiunaaa, Modèle : @leanepipart" },
             ],
             seo: {}
         },
